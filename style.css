@@ -2,9 +2,9 @@
    VARIABLES & RESET
 ═══════════════════════════════════════════════ */
 :root {
-  --bg: #0f1115;
-  --bg-card: #171a21;
-  --bg-card-hover: #1e222c;
+  --bg: #0b3a2b;
+  --bg-card: #0e2f24;
+  --bg-card-hover: #123927;
   --gold: #d4af37;
   --gold-light: #f0d98a;
   --gold-dark: #a8862a;
@@ -19,6 +19,8 @@
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --radius: 16px;
   --radius-sm: 10px;
+  --hero-img-opacity: 0.02;
+  --hero-img-gradient-dark: rgba(8, 31, 26, 0.7);
 }
 
 *,
@@ -270,7 +272,7 @@ ul {
 }
 
 .navbar.scrolled {
-  background: rgba(15, 17, 21, 0.95);
+  /* background: rgb(47, 82, 71); */
   backdrop-filter: blur(20px);
   padding: 12px 0;
   border-bottom: 1px solid var(--border);
@@ -294,8 +296,8 @@ ul {
 }
 
 .logo-img {
-  width: 48px;
-  height: 48px;
+  width: 90px;
+  height: 90px;
   object-fit: contain;
   /* Black logo → gold luxury via CSS filter */
   filter: brightness(0) saturate(100%) invert(78%) sepia(60%) saturate(600%)
@@ -308,8 +310,8 @@ ul {
     drop-shadow(0 0 8px rgba(212, 175, 55, 0.7));
 }
 .logo-img-sm {
-  width: 38px;
-  height: 38px;
+  width: 90px;
+  height: 90px;
 }
 
 .logo-wrap:hover .logo-img {
@@ -409,6 +411,44 @@ ul {
   padding: 140px 0 80px;
   overflow: hidden;
   z-index: 1;
+}
+
+/* Background image overlay merged into hero to blend with trust-strip */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://i.postimg.cc/3Y9qby48/1781284804214-jpg-(1).webp");
+  background-size: cover;
+  background-position: center right;
+  opacity: var(--hero-img-opacity);
+  mix-blend-mode: overlay;
+  filter: brightness(0.95) saturate(0.9);
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity 0.15s ease;
+}
+
+.hero::after {
+  /* a subtle dark gradient at bottom to merge with trust-strip */
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 180px;
+  /* top layer: radial dimmer to reduce visibility in the center where text sits,
+     then a bottom gradient to smoothly fuse with the trust-strip */
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(8, 31, 26, 0.9) 0%,
+      rgba(8, 31, 26, 0.7) 28%,
+      rgba(8, 31, 26, 0) 60%
+    ),
+    linear-gradient(180deg, transparent, var(--hero-img-gradient-dark));
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-bg-glow {
@@ -689,10 +729,33 @@ ul {
   background: rgba(23, 26, 33, 0.5);
 }
 
+/* Fused background image for Why Us section */
+.why-us::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(180deg, var(--hero-img-gradient-dark), rgba(8,31,26,0.25)), url("https://i.postimg.cc/q7gTTGxd/1781286575700-jpg-(1)-(1).webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  mix-blend-mode: overlay;
+  opacity: 0.06;
+  filter: saturate(0.9) contrast(1) blur(0.4px);
+  transform: scale(1.02);
+  z-index: 1; /* under content */
+}
+
 .why-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+}
+
+.why-grid {
+  position: relative;
+  z-index: 3; /* ensure cards render above the fused background */
 }
 
 .why-card {
@@ -767,6 +830,29 @@ ul {
 .services {
   position: relative;
   z-index: 2;
+}
+
+/* Fused background image for Services section */
+.services::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(180deg, var(--hero-img-gradient-dark), rgba(8,31,26,0.25)), url("https://i.postimg.cc/prr8Q4fV/Whats-App-Image-2026-06-12-at-1-40-55-PM-(3).jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  mix-blend-mode: overlay;
+  opacity: 0.06;
+  filter: saturate(0.9) contrast(1) blur(0.4px);
+  transform: scale(1.02);
+  z-index: 1;
+}
+
+.services .container {
+  position: relative;
+  z-index: 3; /* ensure services content appears above the fused background */
 }
 
 .services-category {
@@ -964,11 +1050,34 @@ ul {
   z-index: 2;
 }
 
+/* Fused background image for Registration section */
+.registration::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(180deg, var(--hero-img-gradient-dark), rgba(8,31,26,0.25)), url("https://i.postimg.cc/LRJz8Rrc/1781287910627-jpg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  mix-blend-mode: overlay;
+  opacity: 0.06;
+  filter: saturate(0.9) contrast(1) blur(0.4px);
+  transform: scale(1.02);
+  z-index: 1;
+}
+
 .reg-wrap {
   display: flex;
   flex-direction: column;
   gap: 32px;
   align-items: center;
+}
+
+.reg-wrap {
+  position: relative;
+  z-index: 3; /* ensure registration content appears above the fused background */
 }
 
 .reg-card {
@@ -1114,11 +1223,34 @@ ul {
   background: rgba(23, 26, 33, 0.5);
 }
 
+/* Fused background image for Contact section */
+.contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(180deg, var(--hero-img-gradient-dark), rgba(8,31,26,0.25)), url("https://i.postimg.cc/rpq3gw3J/Whats-App-Image-2026-06-12-at-1-40-56-PM-(1).jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  mix-blend-mode: overlay;
+  opacity: 0.06;
+  filter: saturate(0.9) contrast(1) blur(0.4px);
+  transform: scale(1.02);
+  z-index: 1;
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 60px;
   align-items: start;
+}
+
+.contact-grid {
+  position: relative;
+  z-index: 3; /* ensure contact content appears above the fused background */
 }
 
 .contact-cards {
@@ -1311,8 +1443,26 @@ ul {
 
 .cta-inner {
   position: relative;
-  z-index: 2;
+  z-index: 3; /* above the background image */
   text-align: center;
+}
+
+/* Hero image fused with canvas/textures: low-opacity, blended, and dark-gradient overlay */
+.cta-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(180deg, var(--hero-img-gradient-dark), rgba(8,31,26,0.25)), url("https://i.postimg.cc/8kKsN8tV/Whats-App-Image-2026-06-12-at-1-40-55-PM-(2).webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  mix-blend-mode: overlay;
+  opacity: 0.06; /* low opacity to subtly fuse with canvas/textures */
+  filter: saturate(0.9) contrast(1) blur(0.4px);
+  transform: scale(1.02);
+  z-index: 1; /* place under .cta-inner but above page canvas (which is z-index:0) */
 }
 
 .cta-icon {
