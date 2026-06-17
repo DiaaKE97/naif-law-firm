@@ -800,29 +800,6 @@ ul {
   z-index: 2;
 }
 
-/* Fused background image for Services section */
-.services::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image: linear-gradient(180deg, var(--hero-img-gradient-dark), rgba(8,31,26,0.25)), url("https://i.postimg.cc/prr8Q4fV/Whats-App-Image-2026-06-12-at-1-40-55-PM-(3).jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
-  mix-blend-mode: overlay;
-  opacity: 0.06;
-  filter: saturate(0.9) contrast(1) blur(0.4px);
-  transform: scale(1.02);
-  z-index: 1;
-}
-
-.services .container {
-  position: relative;
-  z-index: 3; /* ensure services content appears above the fused background */
-}
-
 .services-category {
   margin-bottom: 56px;
 }
@@ -1261,6 +1238,311 @@ ul {
 /* ═══════════════════════════════════════════════
    CONTACT
 ═══════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════
+   OFFICE LOCATION
+═══════════════════════════════════════════════ */
+.office-location {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.office-location::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(212, 175, 55, 0.12), transparent 34%),
+    linear-gradient(180deg, rgba(8, 31, 26, 0.35), rgba(23, 26, 33, 0.55));
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.office-location .container {
+  position: relative;
+  z-index: 3;
+}
+
+.office-location-grid {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.85fr) minmax(0, 1.15fr);
+  gap: 34px;
+  align-items: stretch;
+}
+
+.office-address-card,
+.office-gallery {
+  background: linear-gradient(135deg, rgba(14, 47, 36, 0.9), rgba(26, 30, 40, 0.82));
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(14px);
+}
+
+.office-address-card {
+  position: relative;
+  min-height: 100%;
+  padding: 34px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.office-address-card::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), transparent);
+}
+
+.office-address-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-card), var(--shadow-gold);
+}
+
+.office-address-icon {
+  width: 76px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 26px;
+  color: var(--gold);
+  font-size: 2rem;
+  border: 1px solid var(--border-hover);
+  border-radius: 20px;
+  background: rgba(212, 175, 55, 0.1);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
+}
+
+.office-address-head span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--gold-light);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.office-address-head h3 {
+  color: var(--white);
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  margin-bottom: 24px;
+}
+
+.office-address-list {
+  display: grid;
+  gap: 14px;
+}
+
+.office-address-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 18px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.12);
+  border-radius: 14px;
+}
+
+.office-address-item strong {
+  color: var(--white);
+  font-size: 1.04rem;
+}
+
+.office-gallery {
+  overflow: hidden;
+}
+
+.office-gallery-main {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  min-height: 380px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(212, 175, 55, 0.16);
+}
+
+.office-gallery-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  opacity: 1;
+  transform: scale(1.001);
+  transition: opacity 0.38s ease, transform 0.55s ease;
+}
+
+.office-gallery-main:hover .office-gallery-image {
+  transform: scale(1.045);
+}
+
+.office-gallery-image.is-changing {
+  opacity: 0;
+}
+
+.office-gallery-shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 45%, rgba(8, 31, 26, 0.58));
+}
+
+.office-gallery-btn {
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  color: var(--white);
+  background: rgba(8, 31, 26, 0.72);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 2;
+}
+
+.office-gallery-btn:hover,
+.office-gallery-btn:focus-visible {
+  color: var(--gold);
+  border-color: var(--border-hover);
+  background: rgba(14, 47, 36, 0.92);
+  box-shadow: 0 0 22px rgba(212, 175, 55, 0.2);
+  outline: none;
+}
+
+.office-gallery-next {
+  right: 16px;
+}
+
+.office-gallery-prev {
+  left: 16px;
+}
+
+.office-gallery-count {
+  position: absolute;
+  inset-inline-start: 18px;
+  bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 13px;
+  color: var(--white);
+  font-weight: 800;
+  background: rgba(8, 31, 26, 0.74);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 999px;
+  z-index: 2;
+}
+
+.office-gallery-current {
+  color: var(--gold-light);
+}
+
+.office-gallery-thumbs {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 104px;
+  gap: 10px;
+  margin-top: 12px;
+  padding: 2px 2px 8px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-dark) rgba(255, 255, 255, 0.08);
+}
+
+.office-thumb {
+  height: 72px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+  opacity: 0.66;
+  transition: opacity 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.office-thumb img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.office-thumb:hover,
+.office-thumb:focus-visible,
+.office-thumb.active {
+  opacity: 1;
+  transform: translateY(-2px);
+  border-color: var(--border-hover);
+  outline: none;
+}
+
+@media (max-width: 992px) {
+  .office-location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .office-address-card {
+    order: 1;
+  }
+
+  .office-gallery {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .office-address-card {
+    padding: 26px 20px;
+  }
+
+  .office-gallery-main {
+    min-height: 300px;
+  }
+
+  .office-gallery-thumbs {
+    grid-auto-columns: 92px;
+  }
+}
+
+@media (max-width: 480px) {
+  .office-location-grid {
+    gap: 22px;
+  }
+
+  .office-address-item {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .office-gallery {
+    padding: 10px;
+  }
+
+  .office-gallery-main {
+    aspect-ratio: 4 / 5;
+    min-height: 340px;
+  }
+
+  .office-gallery-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .contact {
   position: relative;
   z-index: 2;
