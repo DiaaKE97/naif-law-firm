@@ -521,39 +521,7 @@ ul {
   gap: 16px;
   margin-bottom: 60px;
 }
-
-.hero-stats {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  flex-wrap: wrap;
-}
-
-.stat {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.stat-num {
-  font-size: 2rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.stat span:last-child {
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
-.stat-divider {
-  width: 1px;
-  height: 50px;
-  background: var(--border);
-}
+/* .hero-stats and related .stat styles removed */
 
 .hero-lines {
   position: absolute;
@@ -1078,6 +1046,82 @@ ul {
 .reg-wrap {
   position: relative;
   z-index: 3; /* ensure registration content appears above the fused background */
+}
+
+/* Registration subtitle and logos */
+.reg-subtitle {
+  font-size: 1.05rem;
+  color: var(--muted);
+  text-align: center;
+  max-width: 760px;
+  margin: 12px auto 8px;
+}
+
+.reg-logos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 800px;
+  margin: 22px auto 0;
+  padding: 14px;
+  direction: rtl; /* ensure logos appear right-to-left */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(212, 175, 55, 0.04)
+  );
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(12px);
+}
+
+.reg-logo {
+  width: 100%;
+  height: 120px;
+  padding: 18px 24px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35),
+    0 10px 26px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease, filter 0.25s ease;
+  object-fit: contain;
+}
+.reg-logo:hover {
+  transform: translateY(-4px) scale(1.02);
+  filter: brightness(1.05);
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.45),
+    0 16px 34px rgba(0, 0, 0, 0.25), 0 0 22px rgba(212, 175, 55, 0.15);
+}
+
+@media (max-width: 768px) {
+  .reg-logos {
+    gap: 12px;
+    padding: 12px;
+  }
+  .reg-logo {
+    height: 92px;
+    padding: 14px 16px;
+  }
+}
+@media (max-width: 480px) {
+  .reg-logos {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    gap: 10px;
+  }
+  .reg-logo {
+    height: 104px;
+    padding: 16px 22px;
+  }
+  .reg-subtitle {
+    font-size: 0.98rem;
+  }
 }
 
 .reg-card {
@@ -1789,12 +1833,7 @@ ul {
     padding: 120px 0 60px;
     min-height: auto;
   }
-  .hero-stats {
-    gap: 20px;
-  }
-  .stat-divider {
-    height: 40px;
-  }
+  /* hero-stats responsive styles removed */
 
   .why-grid {
     grid-template-columns: 1fr;
@@ -1856,14 +1895,7 @@ ul {
   .about-features {
     grid-template-columns: 1fr;
   }
-  .hero-stats {
-    flex-direction: column;
-    gap: 16px;
-  }
-  .stat-divider {
-    width: 60px;
-    height: 1px;
-  }
+  /* hero-stats responsive styles removed */
   .reg-badges {
     flex-direction: column;
     align-items: center;
