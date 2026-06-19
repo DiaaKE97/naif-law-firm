@@ -2,17 +2,20 @@
    SCRIPT.JS – مكتب نايف الفهدان للمحاماة
 ═══════════════════════════════════════════════ */
 
-'use strict';
+"use strict";
 
 /* ─────────────────────────────────────────
    1. CANVAS BACKGROUND — golden geometric lines
 ───────────────────────────────────────── */
 (function initCanvas() {
-  const canvas = document.getElementById('bgCanvas');
+  const canvas = document.getElementById("bgCanvas");
   if (!canvas) return;
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext("2d");
 
-  let W, H, nodes = [], animId;
+  let W,
+    H,
+    nodes = [],
+    animId;
 
   function resize() {
     W = canvas.width = window.innerWidth;
@@ -36,7 +39,7 @@
     ctx.clearRect(0, 0, W, H);
 
     // Move nodes
-    nodes.forEach(n => {
+    nodes.forEach((n) => {
       n.x += n.vx;
       n.y += n.vy;
       if (n.x < 0 || n.x > W) n.vx *= -1;
@@ -63,10 +66,10 @@
     }
 
     // Draw nodes
-    nodes.forEach(n => {
+    nodes.forEach((n) => {
       ctx.beginPath();
       ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(212, 175, 55, 0.25)';
+      ctx.fillStyle = "rgba(212, 175, 55, 0.25)";
       ctx.fill();
     });
 
@@ -80,7 +83,7 @@
     drawFrame();
   }
 
-  window.addEventListener('resize', () => {
+  window.addEventListener("resize", () => {
     resize();
     createNodes(55);
   });
@@ -88,19 +91,18 @@
   init();
 })();
 
-
 /* ─────────────────────────────────────────
    2. FLOATING PARTICLES
 ───────────────────────────────────────── */
 (function initParticles() {
-  const container = document.getElementById('particles');
+  const container = document.getElementById("particles");
   if (!container) return;
 
   const count = 28;
 
   for (let i = 0; i < count; i++) {
-    const p = document.createElement('div');
-    p.className = 'particle';
+    const p = document.createElement("div");
+    p.className = "particle";
 
     const size = Math.random() * 2.5 + 1;
     const left = Math.random() * 100;
@@ -116,113 +118,120 @@
       opacity: 0;
       animation-delay: ${delay}s;
       animation-duration: ${duration}s;
-      filter: blur(${Math.random() > 0.7 ? '1px' : '0px'});
+      filter: blur(${Math.random() > 0.7 ? "1px" : "0px"});
     `;
 
     container.appendChild(p);
   }
 })();
 
-
 /* ─────────────────────────────────────────
    3. NAVBAR — scroll behaviour & hamburger
 ───────────────────────────────────────── */
 (function initNavbar() {
-  const navbar = document.getElementById('navbar');
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('navLinks');
+  const navbar = document.getElementById("navbar");
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
 
   if (!navbar) return;
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 60) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  }, { passive: true });
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (window.scrollY > 60) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    },
+    { passive: true },
+  );
 
   if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
-      hamburger.classList.toggle('open', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+    hamburger.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      hamburger.classList.toggle("open", isOpen);
+      document.body.style.overflow = isOpen ? "hidden" : "";
     });
 
     // Close on link click
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        hamburger.classList.remove('open');
-        document.body.style.overflow = '';
+    navLinks.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        hamburger.classList.remove("open");
+        document.body.style.overflow = "";
       });
     });
 
     // Close on outside click
-    document.addEventListener('click', (e) => {
+    document.addEventListener("click", (e) => {
       if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-        navLinks.classList.remove('open');
-        hamburger.classList.remove('open');
-        document.body.style.overflow = '';
+        navLinks.classList.remove("open");
+        hamburger.classList.remove("open");
+        document.body.style.overflow = "";
       }
     });
   }
 })();
 
-
 /* ─────────────────────────────────────────
    4. SCROLL REVEAL — intersection observer
 ───────────────────────────────────────── */
 (function initReveal() {
-  const revealEls = document.querySelectorAll('.reveal');
+  const revealEls = document.querySelectorAll(".reveal");
   if (!revealEls.length) return;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -60px 0px',
-  });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: "0px 0px -60px 0px",
+    },
+  );
 
-  revealEls.forEach(el => observer.observe(el));
+  revealEls.forEach((el) => observer.observe(el));
 })();
-
 
 /* ─────────────────────────────────────────
    5. SCROLL TO TOP BUTTON
 ───────────────────────────────────────── */
 (function initScrollTop() {
-  const btn = document.getElementById('scrollTop');
+  const btn = document.getElementById("scrollTop");
   if (!btn) return;
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) {
-      btn.classList.add('visible');
-    } else {
-      btn.classList.remove('visible');
-    }
-  }, { passive: true });
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (window.scrollY > 500) {
+        btn.classList.add("visible");
+      } else {
+        btn.classList.remove("visible");
+      }
+    },
+    { passive: true },
+  );
 
-  btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 })();
-
 
 /* ─────────────────────────────────────────
    6. CONTACT FORM — submit handler
 ───────────────────────────────────────── */
 (function initForm() {
-  const form = document.getElementById('consultForm');
-  const success = document.getElementById('formSuccess');
+  const form = document.getElementById("consultForm");
+  const success = document.getElementById("formSuccess");
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const btn = form.querySelector('button[type="submit"]');
@@ -230,7 +239,8 @@
 
     // Loading state
     btn.disabled = true;
-    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> جاري الإرسال...';
+    btn.innerHTML =
+      '<i class="fa-solid fa-spinner fa-spin"></i> جاري الإرسال...';
 
     // Simulate async submit (replace with real endpoint)
     setTimeout(() => {
@@ -238,24 +248,23 @@
       btn.innerHTML = originalText;
 
       if (success) {
-        success.classList.add('show');
+        success.classList.add("show");
         form.reset();
-        setTimeout(() => success.classList.remove('show'), 5000);
+        setTimeout(() => success.classList.remove("show"), 5000);
       }
     }, 1500);
   });
 })();
 
-
 /* ─────────────────────────────────────────
    7. HERO PARALLAX — subtle mouse parallax
 ───────────────────────────────────────── */
 (function initParallax() {
-  const heroGlow = document.querySelector('.hero-bg-glow');
+  const heroGlow = document.querySelector(".hero-bg-glow");
   if (!heroGlow) return;
 
   let rafId;
-  document.addEventListener('mousemove', (e) => {
+  document.addEventListener("mousemove", (e) => {
     if (rafId) cancelAnimationFrame(rafId);
     rafId = requestAnimationFrame(() => {
       const xRatio = (e.clientX / window.innerWidth - 0.5) * 30;
@@ -265,58 +274,59 @@
   });
 })();
 
-
 /* ─────────────────────────────────────────
    8. ACTIVE NAV LINK — highlight on scroll
 ───────────────────────────────────────── */
 (function initActiveNav() {
-  const sections = document.querySelectorAll('section[id]');
+  const sections = document.querySelectorAll("section[id]");
   const navAs = document.querySelectorAll('.nav-links a[href^="#"]');
   if (!sections.length || !navAs.length) return;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.id;
-        navAs.forEach(a => {
-          a.style.color = a.getAttribute('href') === `#${id}` ? 'var(--gold)' : '';
-        });
-      }
-    });
-  }, {
-    rootMargin: '-40% 0px -55% 0px',
-  });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navAs.forEach((a) => {
+            a.style.color =
+              a.getAttribute("href") === `#${id}` ? "var(--gold)" : "";
+          });
+        }
+      });
+    },
+    {
+      rootMargin: "-40% 0px -55% 0px",
+    },
+  );
 
-  sections.forEach(s => observer.observe(s));
+  sections.forEach((s) => observer.observe(s));
 })();
-
 
 /* ─────────────────────────────────────────
    9. SERVICE CARDS — hover glow effect
 ───────────────────────────────────────── */
-(function initCardGlow() {
-  const cards = document.querySelectorAll('.service-card, .why-card');
+// (function initCardGlow() {
+//   const cards = document.querySelectorAll('.service-card, .why-card');
 
-  cards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      card.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(212,175,55,0.07), var(--bg-card-hover) 60%)`;
-    });
+//   cards.forEach(card => {
+//     card.addEventListener('mousemove', (e) => {
+//       const rect = card.getBoundingClientRect();
+//       const x = e.clientX - rect.left;
+//       const y = e.clientY - rect.top;
+//       card.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(212,175,55,0.07), var(--bg-card-hover) 60%)`;
+//     });
 
-    card.addEventListener('mouseleave', () => {
-      card.style.background = '';
-    });
-  });
-})();
-
+//     card.addEventListener('mouseleave', () => {
+//       card.style.background = '';
+//     });
+//   });
+// })();
 
 /* ─────────────────────────────────────────
    10. COUNTER ANIMATION — hero stats
 ───────────────────────────────────────── */
 (function initCounters() {
-  const statNums = document.querySelectorAll('.stat-num');
+  const statNums = document.querySelectorAll(".stat-num");
   if (!statNums.length) return;
 
   function animateCounter(el, target, suffix) {
@@ -336,45 +346,47 @@
     requestAnimationFrame(update);
   }
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const raw = el.textContent;
-        const num = parseInt(raw.replace(/\D/g, ''));
-        const suffix = raw.replace(/[\d]/g, '');
-        animateCounter(el, num, suffix);
-        observer.unobserve(el);
-      }
-    });
-  }, { threshold: 0.5 });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const raw = el.textContent;
+          const num = parseInt(raw.replace(/\D/g, ""));
+          const suffix = raw.replace(/[\d]/g, "");
+          animateCounter(el, num, suffix);
+          observer.unobserve(el);
+        }
+      });
+    },
+    { threshold: 0.5 },
+  );
 
-  statNums.forEach(el => observer.observe(el));
+  statNums.forEach((el) => observer.observe(el));
 })();
-
 
 /* ─────────────────────────────────────────
    11. SMOOTH ANCHOR SCROLL (enhanced)
 ───────────────────────────────────────── */
 (function initSmoothScroll() {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      const href = anchor.getAttribute('href');
-      if (href === '#') return;
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", (e) => {
+      const href = anchor.getAttribute("href");
+      if (href === "#") return;
 
       const target = document.querySelector(href);
       if (!target) return;
 
       e.preventDefault();
 
-      const navH = document.getElementById('navbar')?.offsetHeight || 80;
-      const top = target.getBoundingClientRect().top + window.scrollY - navH - 10;
+      const navH = document.getElementById("navbar")?.offsetHeight || 80;
+      const top =
+        target.getBoundingClientRect().top + window.scrollY - navH - 10;
 
-      window.scrollTo({ top, behavior: 'smooth' });
+      window.scrollTo({ top, behavior: "smooth" });
     });
   });
 })();
-
 
 /* ─────────────────────────────────────────
    12. LOGO INIT — ensure gold filter
@@ -382,63 +394,63 @@
 (function initLogo() {
   // Logo images are already styled via CSS; no JS needed
   // But add a small entrance animation
-  const logos = document.querySelectorAll('.logo-img');
-  logos.forEach(img => {
-    img.addEventListener('load', () => {
-      img.style.opacity = '1';
+  const logos = document.querySelectorAll(".logo-img");
+  logos.forEach((img) => {
+    img.addEventListener("load", () => {
+      img.style.opacity = "1";
     });
     // If already loaded
-    if (img.complete) img.style.opacity = '1';
+    if (img.complete) img.style.opacity = "1";
   });
 })();
-
 
 /* ─────────────────────────────────────────
    13. PROCESS STEPS — sequential reveal
 ───────────────────────────────────────── */
 (function initProcessReveal() {
-  const steps = document.querySelectorAll('.process-step');
+  const steps = document.querySelectorAll(".process-step");
   if (!steps.length) return;
 
-  const observer = new IntersectionObserver((entries) => {
-    let delay = 0;
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, delay);
-        delay += 180;
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      let delay = 0;
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add("visible");
+          }, delay);
+          delay += 180;
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 },
+  );
 
-  steps.forEach(s => observer.observe(s));
+  steps.forEach((s) => observer.observe(s));
 })();
-
 
 /* ─────────────────────────────────────────
    14. REGISTRATION SEAL — pause on hover
 ───────────────────────────────────────── */
 (function initSeal() {
-  const seal = document.querySelector('.reg-seal');
+  const seal = document.querySelector(".reg-seal");
   if (!seal) return;
 
-  seal.addEventListener('mouseenter', () => {
-    seal.style.animationPlayState = 'paused';
+  seal.addEventListener("mouseenter", () => {
+    seal.style.animationPlayState = "paused";
   });
-  seal.addEventListener('mouseleave', () => {
-    seal.style.animationPlayState = 'running';
+  seal.addEventListener("mouseleave", () => {
+    seal.style.animationPlayState = "running";
   });
 })();
-
 
 /* ─────────────────────────────────────────
    15. BACK-TO-TOP SMOOTH + PROGRESS
 ───────────────────────────────────────── */
 (function initScrollProgress() {
   // Create a thin gold progress bar at top
-  const bar = document.createElement('div');
+  const bar = document.createElement("div");
   bar.style.cssText = `
     position: fixed;
     top: 0; left: 0;
@@ -451,10 +463,15 @@
   `;
   document.body.appendChild(bar);
 
-  window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    bar.style.width = pct + '%';
-  }, { passive: true });
+  window.addEventListener(
+    "scroll",
+    () => {
+      const scrollTop = window.scrollY;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      bar.style.width = pct + "%";
+    },
+    { passive: true },
+  );
 })();

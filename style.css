@@ -420,13 +420,13 @@ ul {
   inset: 0;
   background-image: url("https://i.postimg.cc/bqgtY6YX/Whats-App-Image-2026-06-12-at-1-40-56-PM.jpg");
   background-size: cover;
-  background-position: center right;
-  opacity: var(--hero-img-opacity);
-  mix-blend-mode: overlay;
-  filter: brightness(0.95) saturate(0.9);
+  /* background-position: center right; */
+  /* opacity: var(--hero-img-opacity); */
+  /* mix-blend-mode: overlay; */
+  /* filter: brightness(0.95) saturate(0.9); */
   pointer-events: none;
   z-index: 0;
-  transition: opacity 0.15s ease;
+  /* transition: opacity 0.15s ease; */
 }
 
 .hero::after {
@@ -505,11 +505,11 @@ ul {
   line-height: 1.2;
   margin-bottom: 24px;
   letter-spacing: -0.5px;
-  padding: 20px 14px;
-  border-radius: 25px;
-  background: #1eb53838;
-  border: 1px solid var(--border-hover);
-  backdrop-filter: blur(32px);
+  /* padding: 20px 14px; */
+  /* border-radius: 25px; */
+  /* background: #1eb53838; */
+  /* border: 1px solid var(--border-hover); */
+  /* backdrop-filter: blur(32px); */
 }
 
 .hero-sub {
@@ -517,11 +517,11 @@ ul {
   max-width: 900px;
   margin-bottom: 40px;
   line-height: 1.8;
-  padding: 20px 14px;
-  border-radius: 25px;
-  background: #1eb53838;
-  border: 1px solid var(--border-hover);
-  backdrop-filter: blur(32px);
+  /* padding: 20px 14px; */
+  /* border-radius: 25px; */
+  /* background: #1eb53838; */
+  /* border: 1px solid var(--border-hover); */
+  /* backdrop-filter: blur(32px); */
 }
 
 .hero-actions {
@@ -713,21 +713,20 @@ ul {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(
+    /* linear-gradient(
       180deg,
       var(--hero-img-gradient-dark),
       rgba(8, 31, 26, 0.25)
-    ),
-    url("https://i.postimg.cc/q7gTTGxd/1781286575700-jpg-(1)-(1).webp");
+    ), */ url("https://i.postimg.cc/q7gTTGxd/1781286575700-jpg-(1)-(1).webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-blend-mode: overlay;
-  mix-blend-mode: overlay;
-  opacity: 0.5;
-  filter: saturate(0.9) contrast(1) blur(0.4px);
-  transform: scale(1.02);
-  z-index: 1; /* under content */
+  /* background-blend-mode: overlay; */
+  /* mix-blend-mode: overlay; */
+  /* opacity: 0.5; */
+  /* filter: saturate(0.9) contrast(1) blur(0.4px); */
+  /* transform: scale(1.02); */
+  /* z-index: 1; under content */
 }
 
 .why-grid {
@@ -742,16 +741,16 @@ ul {
 }
 
 .why-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  /* background: var(--bg-card); */
+  /* border: 1px solid var(--border); */
+  /* border-radius: var(--radius); */
   padding: 36px 28px;
-  transition: var(--transition);
+  /* transition: var(--transition); */
   position: relative;
   overflow: hidden;
 }
 
-.why-card::before {
+/* .why-card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -761,9 +760,9 @@ ul {
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
   transform: scaleX(0);
   transition: transform 0.4s;
-}
+} */
 
-.why-card:hover {
+/* .why-card:hover {
   border-color: var(--border-hover);
   background: var(--bg-card-hover);
   transform: translateY(-6px);
@@ -772,7 +771,7 @@ ul {
 
 .why-card:hover::before {
   transform: scaleX(1);
-}
+} */
 
 .why-icon {
   width: 56px;
@@ -785,26 +784,28 @@ ul {
   justify-content: center;
   margin-bottom: 20px;
   font-size: 1.3rem;
-  color: var(--gold);
-  transition: var(--transition);
+  /* color: var(--gold); */
+  /* transition: var(--transition); */
 }
 
-.why-card:hover .why-icon {
+/* .why-card:hover .why-icon {
   background: rgba(212, 175, 55, 0.18);
   border-color: var(--border-hover);
-}
+} */
 
 .why-card h3 {
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 12px;
   color: var(--white);
+  text-shadow: 1px 1px 0px black;
 }
 
 .why-card p {
   font-size: 0.9rem;
-  color: var(--muted);
+  /* color: var(--muted); */
   line-height: 1.7;
+  text-shadow: 1px 1px 0px black;
 }
 
 /* ═══════════════════════════════════════════════
