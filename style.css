@@ -5,7 +5,7 @@
   --bg: #0b3a2b;
   --bg-card: #0e2f24;
   --bg-card-hover: #123927;
-  --gold: #d4af37;
+  --gold: gold;
   --gold-light: #f0d98a;
   --gold-dark: #a8862a;
   --white: #ffffff;
@@ -175,21 +175,24 @@ ul {
 
 .section-sub {
   font-size: 1.05rem;
-  color: var(--muted);
+  color: var(--white);
   max-width: 600px;
   margin: 0 auto;
+  text-shadow: 1px 1px 0px black;
 }
 
 .gold-text {
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
     var(--gold) 0%,
     var(--gold-light) 50%,
     var(--gold) 100%
-  );
+  ); */
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* -webkit-text-fill-color: transparent; */
   background-clip: text;
+  color: var(--gold);
+  text-shadow: 1px 1px 0px black;
 }
 
 /* ═══════════════════════════════════════════════
@@ -407,7 +410,7 @@ ul {
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   padding: 140px 0 80px;
   overflow: hidden;
   z-index: 1;
@@ -420,7 +423,7 @@ ul {
   inset: 0;
   background-image: url("https://i.postimg.cc/bqgtY6YX/Whats-App-Image-2026-06-12-at-1-40-56-PM.jpg");
   background-size: cover;
-  /* background-position: center right; */
+  background-position: center center;
   /* opacity: var(--hero-img-opacity); */
   /* mix-blend-mode: overlay; */
   /* filter: brightness(0.95) saturate(0.9); */
@@ -451,7 +454,7 @@ ul {
   z-index: 0;
 }
 
-.hero-bg-glow {
+/* .hero-bg-glow {
   position: absolute;
   top: -200px;
   right: -100px;
@@ -464,7 +467,7 @@ ul {
   );
   pointer-events: none;
   animation: glowPulse 6s ease-in-out infinite;
-}
+} */
 
 @keyframes glowPulse {
   0%,
@@ -719,7 +722,7 @@ ul {
       rgba(8, 31, 26, 0.25)
     ), */ url("https://i.postimg.cc/q7gTTGxd/1781286575700-jpg-(1)-(1).webp");
   background-size: cover;
-  background-position: center;
+  background-position: center left;
   background-repeat: no-repeat;
   /* background-blend-mode: overlay; */
   /* mix-blend-mode: overlay; */
@@ -784,8 +787,9 @@ ul {
   justify-content: center;
   margin-bottom: 20px;
   font-size: 1.3rem;
-  /* color: var(--gold); */
+  color: var(--gold);
   /* transition: var(--transition); */
+  text-shadow: 1px 1px 0px black;
 }
 
 /* .why-card:hover .why-icon {
@@ -797,13 +801,13 @@ ul {
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 12px;
-  color: var(--white);
+  color: var(--gold);
   text-shadow: 1px 1px 0px black;
 }
 
 .why-card p {
   font-size: 0.9rem;
-  /* color: var(--muted); */
+  color: var(--gold);
   line-height: 1.7;
   text-shadow: 1px 1px 0px black;
 }
@@ -1848,7 +1852,7 @@ ul {
 
   .hero {
     padding: 120px 0 60px;
-    min-height: auto;
+    min-height: 800px;
   }
   /* hero-stats responsive styles removed */
 
