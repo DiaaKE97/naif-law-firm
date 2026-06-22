@@ -668,6 +668,19 @@ ul {
 .about {
   position: relative;
   z-index: 2;
+  min-height: 2000px;
+}
+
+/* Fused background image for About section */
+.about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("https://i.postimg.cc/9Cw9sZSt/Whats-App-Image-2026-06-12-at-1-40-57-PM.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .about-grid {
@@ -675,6 +688,8 @@ ul {
   grid-template-columns: 1fr 1.3fr;
   gap: 80px;
   align-items: center;
+  position: relative;
+  z-index: 3;
 }
 
 .about-visual {
@@ -758,6 +773,7 @@ ul {
   color: var(--muted);
   font-size: 1.05rem;
   margin-bottom: 16px;
+  text-shadow: 1px 1px 0px black;
 }
 
 .about-features {
@@ -765,6 +781,7 @@ ul {
   grid-template-columns: 1fr 1fr;
   gap: 14px;
   margin-top: 32px;
+  text-shadow: 1px 1px 0px black;
 }
 
 .about-feat {
@@ -1195,6 +1212,10 @@ ul {
   .reg-logo {
     height: 92px;
     padding: 14px 16px;
+  }
+
+  .about {
+    min-height: 800px;
   }
 }
 @media (max-width: 480px) {
@@ -1892,7 +1913,8 @@ ul {
   }
   .about-visual {
     max-width: 500px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-top: 500px;
   }
   .why-grid {
     grid-template-columns: repeat(2, 1fr);
