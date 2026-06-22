@@ -668,7 +668,7 @@ ul {
 .about {
   position: relative;
   z-index: 2;
-  min-height: 2000px;
+  min-height: 1000px;
 }
 
 /* Fused background image for About section */
@@ -677,7 +677,7 @@ ul {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background-image: url("https://i.postimg.cc/9Cw9sZSt/Whats-App-Image-2026-06-12-at-1-40-57-PM.webp");
+  background-image: url("https://i.postimg.cc/L915PvS8/1781286937630-jpg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -770,7 +770,7 @@ ul {
 }
 
 .about-para {
-  color: var(--muted);
+  color: var(--white);
   font-size: 1.05rem;
   margin-bottom: 16px;
   text-shadow: 1px 1px 0px black;
@@ -789,7 +789,7 @@ ul {
   align-items: center;
   gap: 10px;
   font-size: 0.9rem;
-  color: var(--muted);
+  color: var(--white);
 }
 .about-feat i {
   color: var(--gold);
@@ -916,6 +916,23 @@ ul {
   z-index: 2;
 }
 
+/* Fused background image for Services section */
+.services::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("https://i.postimg.cc/9Cw9sZSt/Whats-App-Image-2026-06-12-at-1-40-57-PM.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.services > .container {
+  position: relative;
+  z-index: 3;
+}
+
 .services-category {
   margin-bottom: 56px;
 }
@@ -941,12 +958,14 @@ ul {
   font-size: 1.1rem;
   color: var(--gold);
   flex-shrink: 0;
+  text-shadow: 1px 1px 0px black;
 }
 
 .cat-header h3 {
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--gold-light);
+  text-shadow: 1px 1px 0px black;
 }
 
 .services-grid {
@@ -956,8 +975,8 @@ ul {
 }
 
 .service-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  /* background: var(--bg-card); */
+  /* border: 1px solid var(--border); */
   border-radius: var(--radius-sm);
   padding: 24px 20px;
   transition: var(--transition);
@@ -1003,8 +1022,9 @@ ul {
 
 .service-card p {
   font-size: 0.85rem;
-  color: var(--muted);
+  color: var(--white);
   line-height: 1.65;
+  text-shadow: 1px 1px 0px black;
 }
 
 /* ═══════════════════════════════════════════════
