@@ -2,8 +2,8 @@
    VARIABLES & RESET
 ═══════════════════════════════════════════════ */
 :root {
-  --bg: #0b3a2b;
-  --bg-card: #0e2f24;
+  --bg: #24150D;
+  --bg-card: #24150D;
   --bg-card-hover: #123927;
   --gold: gold;
   --gold-light: #f0d98a;
@@ -415,6 +415,7 @@ ul {
   padding: 140px 0 80px;
   overflow: hidden;
   z-index: 1;
+  min-height: 1200px;
 }
 
 /* Background image overlay merged into hero to blend with trust-strip */
@@ -438,63 +439,55 @@ ul {
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
+  background-repeat: no-repeat;
+
   opacity: 0;
-  will-change: transform, opacity;
-  animation: heroBgKenBurns 24s infinite ease-in-out;
-  animation-fill-mode: both;
+
+  animation: heroFade 24s infinite;
 }
 
+/* Slide 1 */
 .hero-bg-slide--1 {
   background-image: url("https://i.postimg.cc/bqgtY6YX/Whats-App-Image-2026-06-12-at-1-40-56-PM.jpg");
-  --ken-scale: 1.12;
-  --ken-x: -2%;
-  --ken-y: -1.5%;
   animation-delay: 0s;
 }
 
+/* Slide 2 */
 .hero-bg-slide--2 {
   background-image: url("https://i.postimg.cc/Lm2Ppdp1/Whats-App-Image-2026-06-12-at-1-40-55-PM-(4).jpg");
-  --ken-scale: 1.1;
-  --ken-x: 2%;
-  --ken-y: -1%;
   animation-delay: 6s;
 }
 
+/* Slide 3 */
 .hero-bg-slide--3 {
   background-image: url("https://i.postimg.cc/KmxT2X2T/Whats-App-Image-2026-06-12-at-1-40-55-PM-(1).jpg");
-  --ken-scale: 1.14;
-  --ken-x: -1.5%;
-  --ken-y: 1.5%;
   animation-delay: 12s;
 }
 
+/* Slide 4 */
 .hero-bg-slide--4 {
   background-image: url("https://i.postimg.cc/3Y9qby48/1781284804214-jpg-(1).webp");
-  --ken-scale: 1.11;
-  --ken-x: 1.5%;
-  --ken-y: 2%;
   animation-delay: 18s;
 }
 
-@keyframes heroBgKenBurns {
+@keyframes heroFade {
   0% {
     opacity: 0;
-    transform: scale(1) translate(0, 0);
   }
-  3% {
+
+  8% {
     opacity: 1;
   }
+
   22% {
     opacity: 1;
-    transform: scale(var(--ken-scale, 1.12))
-      translate(var(--ken-x, -2%), var(--ken-y, -1.5%));
   }
-  25% {
+
+  30% {
     opacity: 0;
-    transform: scale(var(--ken-scale, 1.12))
-      translate(var(--ken-x, -2%), var(--ken-y, -1.5%));
   }
+
   100% {
     opacity: 0;
   }
@@ -511,17 +504,17 @@ ul {
   }
 }
 
-.hero::after {
+/* .hero::after { */
   /* a subtle dark gradient at bottom to merge with trust-strip */
-  content: "";
+  /* content: "";
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 180px;
+  height: 180px; */
   /* top layer: radial dimmer to reduce visibility in the center where text sits,
      then a bottom gradient to smoothly fuse with the trust-strip */
-  background:
+  /* background:
     radial-gradient(
       circle at 50% 40%,
       rgba(8, 31, 26, 0.9) 0%,
@@ -531,7 +524,7 @@ ul {
     linear-gradient(180deg, transparent, var(--hero-img-gradient-dark));
   pointer-events: none;
   z-index: 0;
-}
+} */
 
 /* .hero-bg-glow {
   position: absolute;
@@ -548,7 +541,7 @@ ul {
   animation: glowPulse 6s ease-in-out infinite;
 } */
 
-@keyframes glowPulse {
+/* @keyframes glowPulse {
   0%,
   100% {
     opacity: 0.6;
@@ -558,7 +551,7 @@ ul {
     opacity: 1;
     transform: scale(1.1);
   }
-}
+} */
 
 .hero-inner {
   position: relative;
@@ -629,7 +622,7 @@ ul {
 .trust-strip {
   position: relative;
   z-index: 2;
-  background: var(--bg-card);
+  /* background: var(--bg-card); */
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 28px 0;
@@ -903,7 +896,7 @@ ul {
 
 .why-card p {
   font-size: 0.9rem;
-  color: var(--gold);
+  color: var(--white);
   line-height: 1.7;
   text-shadow: 1px 1px 0px black;
 }
@@ -964,7 +957,7 @@ ul {
 .cat-header h3 {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--gold-light);
+  color: var(--gold);
   text-shadow: 1px 1px 0px black;
 }
 
@@ -1017,7 +1010,7 @@ ul {
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 8px;
-  color: var(--white);
+  color: var(--gold);
 }
 
 .service-card p {
@@ -1349,7 +1342,7 @@ ul {
 
 .reg-label {
   font-size: 0.85rem;
-  color: var(--white);
+  color: var(--gold);
   text-shadow: 1px 1px 0px black;
   font-weight: 500;
 }
@@ -1359,7 +1352,7 @@ ul {
   font-weight: 800;
   letter-spacing: 3px;
   /* background: linear-gradient(135deg, var(--gold), var(--gold-light)); */
-  color: var(--gold);
+  color: var(--white);
   /* -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text; */
@@ -1548,7 +1541,7 @@ ul {
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 28px;
-  color: var(--gold-light);
+  color: var(--gold);
   text-shadow: 1px 1px 0px black;
 }
 
@@ -1566,7 +1559,7 @@ ul {
   display: block;
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--white);
+  color: var(--gold);
   text-shadow: 1px 1px 0px black;
   margin-bottom: 8px;
 }
@@ -1721,7 +1714,7 @@ ul {
 .footer {
   position: relative;
   z-index: 2;
-  background: var(--bg-card);
+  /* background: var(--bg-card); */
   border-top: 1px solid var(--border);
   padding-top: 60px;
 }
@@ -1944,14 +1937,19 @@ ul {
    RESPONSIVE
 ═══════════════════════════════════════════════ */
 @media (max-width: 1024px) {
+  .services::before {
+    background-position: center right;
+    background-size: contain;
+    background-repeat: repeat;
+  }
   .about-grid {
     grid-template-columns: 1fr;
     gap: 48px;
   }
   .about-visual {
     max-width: 500px;
-    /* margin: 0 auto; */
-    margin-top: 500px;
+    margin: 0 auto;
+    /* margin-top: 500px; */
   }
   .why-grid {
     grid-template-columns: repeat(2, 1fr);
