@@ -493,99 +493,6 @@ ul {
   }
 }
 
-/* =========================
-   MOBILE MULTI IMAGE MODE
-========================= */
-
-.mobile-bg {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .hero-bg-slide {
-    background-image: none !important;
-
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
-    height: 100%;
-  }
-
-  .mobile-bg {
-    display: block;
-    flex: 1;
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  /* =====================
-     SLIDE 1
-  ===================== */
-
-  .hero-bg-slide--1 .mobile-bg-1 {
-    background-image: url("https://i.postimg.cc/bqgtY6YX/Whats-App-Image-2026-06-12-at-1-40-56-PM.jpg");
-  }
-
-  .hero-bg-slide--1 .mobile-bg-2 {
-    background-image: url("https://i.postimg.cc/Lm2Ppdp1/Whats-App-Image-2026-06-12-at-1-40-55-PM-(4).jpg");
-  }
-
-  .hero-bg-slide--1 .mobile-bg-3 {
-    background-image: url("https://i.postimg.cc/KmxT2X2T/Whats-App-Image-2026-06-12-at-1-40-55-PM-(1).jpg");
-  }
-
-  /* =====================
-     SLIDE 2
-  ===================== */
-
-  .hero-bg-slide--2 .mobile-bg-1 {
-    background-image: url("https://i.postimg.cc/fLTqXTmd/Whats-App-Image-2026-06-24-at-12-56-32-AM.jpg");
-  }
-
-  .hero-bg-slide--2 .mobile-bg-2 {
-    background-image: url("https://i.postimg.cc/3Y9qby48/1781284804214-jpg-(1).webp");
-  }
-
-  .hero-bg-slide--2 .mobile-bg-3 {
-    background-image: url("https://i.postimg.cc/YtMFHcH7/1781285815558-jpg.jpg");
-  }
-
-  /* =====================
-     SLIDE 3
-  ===================== */
-
-  .hero-bg-slide--3 .mobile-bg-1 {
-    background-image: url("https://i.postimg.cc/LRJz8Rrc/1781287910627-jpg.jpg");
-  }
-
-  .hero-bg-slide--3 .mobile-bg-2 {
-    background-image: url("https://i.postimg.cc/WzRdJtJp/Whats-App-Image-2026-06-12-at-1-40-57-PM-(1).jpg");
-  }
-
-  .hero-bg-slide--3 .mobile-bg-3 {
-    background-image: url("https://i.postimg.cc/PJGC8N8P/Whats-App-Image-2026-06-12-at-1-40-57-PM-(2).jpg");
-  }
-
-  /* =====================
-     SLIDE 4
-  ===================== */
-
-  .hero-bg-slide--4 .mobile-bg-1 {
-    background-image: url("https://i.postimg.cc/R03FXLnV/Whats-App-Image-2026-06-12-at-1-40-55-PM.jpg");
-  }
-
-  .hero-bg-slide--4 .mobile-bg-2 {
-    background-image: url("https://i.postimg.cc/BbWj1t16/Whats-App-Image-2026-06-12-at-1-40-57-PM-(3).jpg");
-  }
-
-  .hero-bg-slide--4 .mobile-bg-3 {
-    background-image: url("https://i.postimg.cc/prNmnyn9/Whats-App-Image-2026-06-12-at-1-40-57-PM-(4).jpg");
-  }
-}
-
 /* @media (prefers-reduced-motion: reduce) {
   .hero-bg-slide {
     animation: none;
@@ -1328,6 +1235,9 @@ ul {
 }
 
 @media (max-width: 768px) {
+  .hero-bg-slide {
+    background-size: contain;
+  }
   .reg-logos {
     gap: 12px;
     padding: 12px;
