@@ -990,8 +990,8 @@ ul {
 }
 
 .service-card:hover {
-  /* border-color: var(--border-hover);
-  background: var(--bg-card-hover); */
+  border-color: var(--bg);
+  background: var(--bg);
   transform: translateY(-4px);
   box-shadow: var(--shadow-card);
 }
@@ -1012,6 +1012,7 @@ ul {
   font-weight: 700;
   margin-bottom: 8px;
   color: var(--gold);
+  text-shadow: 1px 1px 0px black;
 }
 
 .service-card p {
