@@ -65,6 +65,7 @@ ul {
 
 .section-pad {
   padding: 100px 0;
+  margin-top: 60px;
 }
 
 /* ═══════════════════════════════════════════════
@@ -1257,9 +1258,9 @@ ul {
     min-height: 800px;
   }
 
-  .section-pad {
+  /* .section-pad {
     padding: 70px 0;
-  }
+  } */
 
   .nav-links {
     position: fixed;
@@ -2123,7 +2124,7 @@ ul {
     /* margin-top: 500px; */
   }
   .why-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   .footer-inner {
     grid-template-columns: 1fr 1fr;
