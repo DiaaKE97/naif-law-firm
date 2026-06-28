@@ -1029,7 +1029,7 @@ ul {
 .process {
   position: relative;
   z-index: 2;
-  background: rgba(23, 26, 33, 0.5);
+  /* background: rgba(23, 26, 33, 0.5); */
 }
 .process::before {
   content: "";
@@ -1042,9 +1042,9 @@ ul {
   background-repeat: no-repeat;
 }
 
-.process > .container {
+/* .process > .container {
   margin-top: 1000px;
-}
+} */
 
 .process-timeline {
   display: grid;
@@ -1303,6 +1303,26 @@ ul {
   .services-grid {
     grid-template-columns: 1fr;
   }
+
+  .process::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background-image:
+      url("https://i.postimg.cc/jtQWv870/1781289060702-jpg.jpg"),
+      url("https://i.postimg.cc/90kM3c5L/Whats-App-Image-2026-06-29-at-12-013-55-AM1.jpg");
+
+    background-size: contain, contain;
+
+    background-repeat: no-repeat, no-repeat;
+
+    background-position:
+      center 25%,
+      center 90%;
+  }
+
   .process-timeline {
     grid-template-columns: 1fr;
   }
@@ -1318,6 +1338,33 @@ ul {
   }
   .reg-number-wrap {
     justify-content: center;
+  }
+
+  .reg-logos {
+    margin-top: 0px;
+  }
+
+  .registration::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background-image:
+      url("https://i.postimg.cc/LRJz8Rrc/1781287910627-jpg.jpg"),
+      url("https://i.postimg.cc/yxxdrk5F/Whats-App-Image-2026-06-29-at-12-03-55-AM1.jpg"),
+      url("https://i.postimg.cc/qqFRfpVc/Whats-App-Image-2026-06-29-at-12-03-3561-AM.jpg"),
+      url("https://i.postimg.cc/L5WXdmKD/Whats-App-Image-2026-06-29-at-12-03-54566-AM.jpg");
+
+    background-size: contain, contain, contain, contain;
+
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+
+    background-position:
+      center 15%,
+      center 45%,
+      center 75%,
+      center 105%;
   }
 
   .form-row {
@@ -1360,7 +1407,7 @@ ul {
     flex: 1;
     min-height: 320px;
 
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 
@@ -1387,7 +1434,7 @@ ul {
     background-image: url("https://i.postimg.cc/WzRdJtJp/Whats-App-Image-2026-06-12-at-1-40-57-PM-(1).jpg");
   }
 
-  .img-6 {
+  /* .img-6 {
     background-image: url("https://i.postimg.cc/PJGC8N8P/Whats-App-Image-2026-06-12-at-1-40-57-PM-(2).jpg");
   }
 
@@ -1397,7 +1444,7 @@ ul {
 
   .img-8 {
     background-image: url("https://i.postimg.cc/prNmnyn9/Whats-App-Image-2026-06-12-at-1-40-57-PM-(4).jpg");
-  }
+  } */
 
   .services > .container {
     position: relative;
