@@ -911,6 +911,10 @@ ul {
   overflow: hidden;
 }
 
+.cat-mobile-image {
+  display: none;
+}
+
 /* Fused background image for Services section */
 .services::before {
   content: "";
@@ -973,7 +977,7 @@ ul {
   /* background: var(--bg-card); */
   /* border: 1px solid var(--border); */
   border-radius: var(--radius-sm);
-  padding: 24px 20px;
+  padding: 12px 20px;
   transition: var(--transition);
   position: relative;
   overflow: hidden;
@@ -2163,7 +2167,24 @@ ul {
     display: none;
   }
 
-  .services-mobile-bg {
+  .cat-mobile-image{
+    display:block;
+    width:100vw;
+
+    margin-right:calc(50% - 50vw);
+    margin-left:calc(50% - 50vw);
+
+    margin-top:20px;
+    margin-bottom:24px;
+}
+
+.cat-mobile-image img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+  /* .services-mobile-bg {
     position: absolute;
     inset: 0;
     z-index: 0;
@@ -2180,10 +2201,10 @@ ul {
     background-position: center;
     background-repeat: no-repeat;
 
-    /* background-color: #0b0f14; */
-  }
+    background-color: #0b0f14;
+  } */
 
-  .img-1 {
+  /* .img-1 {
     background-image: url("https://i.postimg.cc/9Cw9sZSt/Whats-App-Image-2026-06-12-at-1-40-57-PM.webp");
   }
 
@@ -2201,7 +2222,7 @@ ul {
 
   .img-5 {
     background-image: url("https://i.postimg.cc/SQSzMKgP/Whats-App-Image-2026-06-29-at-12-03-3561-AM.jpg");
-  }
+  } */
 
   /* .img-6 {
     background-image: url("https://i.postimg.cc/PJGC8N8P/Whats-App-Image-2026-06-12-at-1-40-57-PM-(2).jpg");
