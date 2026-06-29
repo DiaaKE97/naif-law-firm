@@ -911,7 +911,7 @@ ul {
   overflow: hidden;
 }
 
-.service-mobile-image{
+.cat-mobile-image{
     display:none;
 }
 
@@ -2116,6 +2116,7 @@ ul {
   }
 
 .cat-mobile-image{
+  display:block;
     width:100vw;
 
     margin-right:calc(50% - 50vw);
