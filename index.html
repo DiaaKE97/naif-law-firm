@@ -1,114 +1,206 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <meta
-      name="description"
-      content="مكتب نايف مسفر مشرف الفهدان للمحاماة والاستشارات القانونية - الرياض"
-    />
-    <title>مكتب نايف الفهدان للمحاماة والاستشارات القانونية</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Cairo:wght@300;400;600;700;900&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <!-- ========================= -->
+  <!-- Basic Meta -->
+  <!-- ========================= -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+  <!-- ========================= -->
+  <!-- Primary SEO -->
+  <!-- ========================= -->
+  <title>مكتب نايف مسفر مشرف الفهدان للمحاماة والاستشارات القانونية | محامون ومستشارون قانونيون بالرياض</title>
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- ═══════════════════ CANVAS BACKGROUND ═══════════════════ -->
-    <canvas id="bgCanvas"></canvas>
+  <meta name="title" content="مكتب نايف مسفر مشرف الفهدان للمحاماة والاستشارات القانونية">
 
-    <!-- ═══════════════════ PARTICLES ═══════════════════ -->
-    <div id="particles"></div>
+  <meta name="description"
+    content="مكتب نايف مسفر مشرف الفهدان للمحاماة والاستشارات القانونية بمدينة الرياض يقدم خدمات التقاضي، الاستشارات القانونية، التمثيل القضائي، صياغة العقود، التحكيم، تنفيذ الأحكام، المنازعات التجارية، القضايا العمالية، العقارية، والأحوال الشخصية للأفراد والشركات وفق الأنظمة السعودية.">
 
-    <!-- ═══════════════════ SVG DECORATIVE LAYER ═══════════════════ -->
-    <div class="svg-layer" aria-hidden="true">
-      <!-- Geometric Pattern -->
-      <svg
-        class="deco-pattern"
-        viewBox="0 0 400 400"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <pattern
-            id="hexPat"
-            x="0"
-            y="0"
-            width="60"
-            height="52"
-            patternUnits="userSpaceOnUse"
-          >
-            <polygon
-              points="30,2 58,17 58,47 30,62 2,47 2,17"
-              fill="none"
-              stroke="#D4AF37"
-              stroke-width="0.5"
-              opacity="0.08"
-            />
-          </pattern>
-        </defs>
-        <rect width="400" height="400" fill="url(#hexPat)" />
-      </svg>
+  <meta name="author" content="مكتب نايف مسفر مشرف الفهدان للمحاماة والاستشارات القانونية">
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="canonical" href="https://naifalfhdan.sa/">
+
+  <!-- ========================= -->
+  <!-- Language -->
+  <!-- ========================= -->
+  <meta name="geo.region" content="SA-RIYADH">
+  <meta name="geo.placename" content="Riyadh">
+
+  <!-- ========================= -->
+  <!-- Theme -->
+  <!-- ========================= -->
+  <meta name="theme-color" content="#0F1115">
+  <meta name="color-scheme" content="dark">
+
+  <!-- ========================= -->
+  <!-- Favicon -->
+  <!-- ========================= -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicon.ico">
+  <link rel="mask-icon" href="favicon.ico" color="#D4AF37">
+
+  <!-- ========================= -->
+  <!-- Open Graph -->
+  <!-- ========================= -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_SA">
+  <meta property="og:url" content="https://naifalfhdan.sa/">
+
+  <meta property="og:site_name" content="مكتب نايف مسفر مشرف الفهدان للمحاماة والاستشارات القانونية">
+
+  <meta property="og:title" content="مكتب نايف مسفر مشرف الفهدان للمحاماة والاستشارات القانونية">
+
+  <meta property="og:description"
+    content="خدمات المحاماة والاستشارات القانونية والتمثيل القضائي وصياغة العقود وحل النزاعات للأفراد والشركات وفق الأنظمة السعودية.">
+
+  <!-- استبدلها بصورة مشاركة للموقع 1200x630 -->
+  <meta property="og:image" content="https://i.postimg.cc/bqgtY6YX/Whats-App-Image-2026-06-12-at-1-40-56-PM.jpg">
+
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta property="og:image:alt" content="مكتب نايف مسفر مشرف الفهدان للمحاماة والاستشارات القانونية">
+
+  <meta property="og:image:type" content="image/jpeg">
+
+  <meta property="og:image:secure_url"
+    content="https://i.postimg.cc/bqgtY6YX/Whats-App-Image-2026-06-12-at-1-40-56-PM.jpg">
+
+  <meta property="og:site_name" content="مكتب نايف الفهدان">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- ========================= -->
+  <!-- Twitter -->
+  <!-- ========================= -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="twitter:title" content="مكتب نايف مسفر مشرف الفهدان للمحاماة والاستشارات القانونية">
+
+  <meta name="twitter:description"
+    content="خدمات قانونية احترافية للأفراد والشركات بمدينة الرياض وفق الأنظمة السعودية.">
+
+  <meta name="twitter:image" content="https://i.postimg.cc/bqgtY6YX/Whats-App-Image-2026-06-12-at-1-40-56-PM.jpg">
+  <meta name="twitter:image:alt" content="مكتب نايف مسفر مشرف الفهدان للمحاماة والاستشارات القانونية">
+
+  <!-- ========================= -->
+  <!-- Performance -->
+  <!-- ========================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+
+  <!-- ========================= -->
+  <!-- Fonts -->
+  <!-- ========================= -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- ========================= -->
+  <!-- Font Awesome -->
+  <!-- ========================= -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- ========================= -->
+  <!-- PWA -->
+  <!-- ========================= -->
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="مكتب نايف الفهدان">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+
+  <!-- ========================= -->
+  <!-- Styles -->
+  <!-- ========================= -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ========================= -->
+  <!-- Manifest -->
+  <!-- ========================= -->
+
+  <link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+<body>
+  <!-- ═══════════════════ CANVAS BACKGROUND ═══════════════════ -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- ═══════════════════ PARTICLES ═══════════════════ -->
+  <div id="particles"></div>
+
+  <!-- ═══════════════════ SVG DECORATIVE LAYER ═══════════════════ -->
+  <div class="svg-layer" aria-hidden="true">
+    <!-- Geometric Pattern -->
+    <svg class="deco-pattern" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="hexPat" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse">
+          <polygon points="30,2 58,17 58,47 30,62 2,47 2,17" fill="none" stroke="#D4AF37" stroke-width="0.5"
+            opacity="0.08" />
+        </pattern>
+      </defs>
+      <rect width="400" height="400" fill="url(#hexPat)" />
+    </svg>
+  </div>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="logo-wrap">
+        <img src="https://i.postimg.cc/Y92nbqKC/Image-To-Stl-com-logo.png" alt="شعار مكتب الفهدان" class="logo-img" />
+        <span class="logo-text">مكتب نايف بن مسفر الفهدان
+          <span>للمحاماة والاستشارات القانونية</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">عن المكتب</a>
+        <a href="#services">الخدمات</a>
+        <a href="#why-us">لماذا نحن</a>
+        <a href="#process">آلية العمل</a>
+        <a href="#registration">التسجيل</a>
+        <a href="#contact">تواصل معنا</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="قائمة">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </header>
 
-    <!-- ═══════════════════ NAVBAR ═══════════════════ -->
-    <header class="navbar" id="navbar">
-      <div class="container nav-inner">
-        <a href="#hero" class="logo-wrap">
-          <img
-            src="https://i.postimg.cc/Y92nbqKC/Image-To-Stl-com-logo.png"
-            alt="شعار مكتب الفهدان"
-            class="logo-img"
-          />
-          <span class="logo-text"
-            >مكتب نايف بن مسفر الفهدان
-            <span>للمحاماة والاستشارات القانونية</span></span
-          >
-        </a>
-
-        <nav class="nav-links" id="navLinks">
-          <a href="#about">عن المكتب</a>
-          <a href="#services">الخدمات</a>
-          <a href="#why-us">لماذا نحن</a>
-          <a href="#process">آلية العمل</a>
-          <a href="#registration">التسجيل</a>
-          <a href="#contact">تواصل معنا</a>
-        </nav>
-
-        <button class="hamburger" id="hamburger" aria-label="قائمة">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </header>
-
-    <!-- ═══════════════════ HERO ═══════════════════ -->
-    <section class="hero" id="hero">
-      <div class="hero-bg-slider" aria-hidden="true">
-        <div class="hero-bg-slide hero-bg-slide--1"></div>
-        <div class="hero-bg-slide hero-bg-slide--2"></div>
-        <div class="hero-bg-slide hero-bg-slide--3"></div>
-        <div class="hero-bg-slide hero-bg-slide--4"></div>
-      </div>
-      <!-- <div class="hero-bg-glow"></div> -->
-      <div class="container hero-inner">
-        <!-- <div class="hero-badge reveal">
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-slider" aria-hidden="true">
+      <div class="hero-bg-slide hero-bg-slide--1"></div>
+      <div class="hero-bg-slide hero-bg-slide--2"></div>
+      <div class="hero-bg-slide hero-bg-slide--3"></div>
+      <div class="hero-bg-slide hero-bg-slide--4"></div>
+    </div>
+    <!-- <div class="hero-bg-glow"></div> -->
+    <div class="container hero-inner">
+      <!-- <div class="hero-badge reveal">
           <i class="fa-solid fa-shield-halved"></i>
           <span>منشأة قانونية معتمدة · الرياض</span>
         </div> -->
-        <!-- <h1 class="hero-title reveal">
+      <!-- <h1 class="hero-title reveal">
           <span class="gold-text">مكتب نايف بن مسفر الفهدان</span> <br />
           حماية قانونية احترافية
           <br />
@@ -118,74 +210,62 @@
           نقدم خدمات المحاماة والاستشارات القانونية والتمثيل القضائي وصياغة
           العقود وحل النزاعات وفق الأنظمة السعودية بأعلى معايير الاحترافية.
         </p> -->
-        <div class="hero-actions reveal">
-          <a href="#contact" class="btn btn-gold">
-            <i class="fa-solid fa-calendar-check"></i>
-            احجز استشارتك
-          </a>
-          <a
-            href="https://wa.me/966553333373"
-            target="_blank"
-            class="btn btn-outline"
-          >
-            <i class="fa-brands fa-whatsapp"></i>
-            تواصل عبر واتساب
-          </a>
-        </div>
-        <!-- hero-stats removed -->
+      <div class="hero-actions reveal">
+        <a href="#contact" class="btn btn-gold">
+          <i class="fa-solid fa-calendar-check"></i>
+          احجز استشارتك
+        </a>
+        <a href="https://wa.me/966553333373" target="_blank" class="btn btn-outline">
+          <i class="fa-brands fa-whatsapp"></i>
+          تواصل عبر واتساب
+        </a>
       </div>
+      <!-- hero-stats removed -->
+    </div>
 
-      <!-- Hero decorative lines -->
-      <svg
-        class="hero-lines"
-        viewBox="0 0 1440 120"
-        preserveAspectRatio="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <linearGradient id="heroGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" style="stop-color: #3a2415; stop-opacity: 1" />
-            <stop offset="100%" style="stop-color: #24150d; stop-opacity: 1" />
-          </linearGradient>
-        </defs>
-        <path
-          d="M0,60 C360,10 1080,110 1440,60 L1440,120 L0,120 Z"
-          fill="url(#heroGradient)"
-        />
-      </svg>
-    </section>
+    <!-- Hero decorative lines -->
+    <svg class="hero-lines" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="heroGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color: #3a2415; stop-opacity: 1" />
+          <stop offset="100%" style="stop-color: #24150d; stop-opacity: 1" />
+        </linearGradient>
+      </defs>
+      <path d="M0,60 C360,10 1080,110 1440,60 L1440,120 L0,120 Z" fill="url(#heroGradient)" />
+    </svg>
+  </section>
 
-    <!-- ═══════════════════ TRUST STRIP ═══════════════════ -->
-    <section class="trust-strip">
-      <div class="container trust-inner">
-        <div class="trust-item reveal">
-          <i class="fa-solid fa-certificate"></i>
-          <span>منشأة قانونية معتمدة</span>
-        </div>
-        <div class="trust-sep"></div>
-        <div class="trust-item reveal">
-          <i class="fa-solid fa-location-dot"></i>
-          <span>مقرنا الرياض</span>
-        </div>
-        <div class="trust-sep"></div>
-        <div class="trust-item reveal">
-          <i class="fa-solid fa-users"></i>
-          <span>خدمات للأفراد والشركات</span>
-        </div>
-        <div class="trust-sep"></div>
-        <div class="trust-item reveal">
-          <i class="fa-solid fa-gavel"></i>
-          <span>تمثيل قضائي واستشارات قانونية</span>
-        </div>
+  <!-- ═══════════════════ TRUST STRIP ═══════════════════ -->
+  <section class="trust-strip">
+    <div class="container trust-inner">
+      <div class="trust-item reveal">
+        <i class="fa-solid fa-certificate"></i>
+        <span>منشأة قانونية معتمدة</span>
       </div>
-    </section>
+      <div class="trust-sep"></div>
+      <div class="trust-item reveal">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>مقرنا الرياض</span>
+      </div>
+      <div class="trust-sep"></div>
+      <div class="trust-item reveal">
+        <i class="fa-solid fa-users"></i>
+        <span>خدمات للأفراد والشركات</span>
+      </div>
+      <div class="trust-sep"></div>
+      <div class="trust-item reveal">
+        <i class="fa-solid fa-gavel"></i>
+        <span>تمثيل قضائي واستشارات قانونية</span>
+      </div>
+    </div>
+  </section>
 
-    <!-- ═══════════════════ ABOUT ═══════════════════ -->
-    <section class="about section-pad" id="about">
-      <div class="container about-grid">
-        <div class="about-visual reveal">
-          <div class="about-card-wrap">
-            <!-- <div class="about-img-frame">
+  <!-- ═══════════════════ ABOUT ═══════════════════ -->
+  <section class="about section-pad" id="about">
+    <div class="container about-grid">
+      <div class="about-visual reveal">
+        <div class="about-card-wrap">
+          <!-- <div class="about-img-frame">
               <div class="about-img-inner">
                 <img
                   src="https://i.postimg.cc/9Cw9sZSt/Whats-App-Image-2026-06-12-at-1-40-57-PM.webp"
@@ -195,122 +275,122 @@
                 />
               </div>
             </div> -->
-            <!-- <div class="about-badge-card">
+          <!-- <div class="about-badge-card">
               <i class="fa-solid fa-star"></i>
               <p>مكتب معتمد بأعلى المعايير القانونية</p>
             </div> -->
-          </div>
         </div>
+      </div>
 
-        <div class="about-content reveal">
-          <div class="section-label">من نحن</div>
-          <!-- <h2 class="section-title">
+      <div class="about-content reveal">
+        <div class="section-label">من نحن</div>
+        <!-- <h2 class="section-title">
             <span class="gold-text"
               >مكتب نايف بن مسفر الفهدان<br />
               للمحاماة والاستشارات القانونية</span
             >
           </h2> -->
-          <p class="about-para">
-            مكتب قانوني متخصص مرخّص من وزارة العدل في المملكة العربية السعودية،
-            يضم نخبة من المحامين والمستشارين القانونيين ذوي الخبرة الواسعة في
-            مختلف فروع القانون.
-          </p>
-          <p class="about-para">
-            يسعى المكتب إلى تقديم خدمات قانونية متكاملة للأفراد والمنشآت
-            التجارية والشركات، مع الالتزام التام بأخلاقيات المهنة وأعلى معايير
-            الاحترافية والنزاهة.
-          </p>
-          <div class="about-features">
-            <div class="about-feat">
-              <i class="fa-solid fa-check-circle"></i>
-              <span>فريق قانوني متخصص ومرخّص</span>
-            </div>
-            <div class="about-feat">
-              <i class="fa-solid fa-check-circle"></i>
-              <span>خبرة واسعة في الأنظمة السعودية</span>
-            </div>
-            <div class="about-feat">
-              <i class="fa-solid fa-check-circle"></i>
-              <span>استشارات سرية ومهنية</span>
-            </div>
-            <div class="about-feat">
-              <i class="fa-solid fa-check-circle"></i>
-              <span>تمثيل قضائي أمام كافة الجهات</span>
-            </div>
+        <p class="about-para">
+          مكتب قانوني متخصص مرخّص من وزارة العدل في المملكة العربية السعودية،
+          يضم نخبة من المحامين والمستشارين القانونيين ذوي الخبرة الواسعة في
+          مختلف فروع القانون.
+        </p>
+        <p class="about-para">
+          يسعى المكتب إلى تقديم خدمات قانونية متكاملة للأفراد والمنشآت
+          التجارية والشركات، مع الالتزام التام بأخلاقيات المهنة وأعلى معايير
+          الاحترافية والنزاهة.
+        </p>
+        <div class="about-features">
+          <div class="about-feat">
+            <i class="fa-solid fa-check-circle"></i>
+            <span>فريق قانوني متخصص ومرخّص</span>
+          </div>
+          <div class="about-feat">
+            <i class="fa-solid fa-check-circle"></i>
+            <span>خبرة واسعة في الأنظمة السعودية</span>
+          </div>
+          <div class="about-feat">
+            <i class="fa-solid fa-check-circle"></i>
+            <span>استشارات سرية ومهنية</span>
+          </div>
+          <div class="about-feat">
+            <i class="fa-solid fa-check-circle"></i>
+            <span>تمثيل قضائي أمام كافة الجهات</span>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ═══════════════════ WHY US ═══════════════════ -->
-    <section class="why-us section-pad" id="why-us">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-label">لماذا تختارنا</div>
-          <h2 class="section-title">
-            <span class="gold-text"> ميزات تجعلنا الخيار الأول</span>
-          </h2>
-          <p class="section-sub">
-            نجمع بين الخبرة القانونية العميقة والالتزام الأخلاقي لتقديم أفضل
-            تمثيل قانوني ممكن.
+  <!-- ═══════════════════ WHY US ═══════════════════ -->
+  <section class="why-us section-pad" id="why-us">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">لماذا تختارنا</div>
+        <h2 class="section-title">
+          <span class="gold-text"> ميزات تجعلنا الخيار الأول</span>
+        </h2>
+        <p class="section-sub">
+          نجمع بين الخبرة القانونية العميقة والالتزام الأخلاقي لتقديم أفضل
+          تمثيل قانوني ممكن.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <i class="fa-solid fa-balance-scale"></i>
+          </div>
+          <h3>خبرة قانونية متعمقة</h3>
+          <p>
+            فريقنا من المحامين يمتلك سنوات طويلة من الخبرة في القضايا المعقدة
+            والمتنوعة.
           </p>
         </div>
-
-        <div class="why-grid">
-          <div class="why-card reveal">
-            <div class="why-icon">
-              <i class="fa-solid fa-balance-scale"></i>
-            </div>
-            <h3>خبرة قانونية متعمقة</h3>
-            <p>
-              فريقنا من المحامين يمتلك سنوات طويلة من الخبرة في القضايا المعقدة
-              والمتنوعة.
-            </p>
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <i class="fa-solid fa-shield-halved"></i>
           </div>
-          <div class="why-card reveal">
-            <div class="why-icon">
-              <i class="fa-solid fa-shield-halved"></i>
-            </div>
-            <h3>سرية تامة وأمانة</h3>
-            <p>
-              نلتزم بمعايير السرية العالية لحماية معلومات عملائنا وحقوقهم
-              القانونية.
-            </p>
-          </div>
-          <div class="why-card reveal">
-            <div class="why-icon"><i class="fa-solid fa-clock"></i></div>
-            <h3>استجابة سريعة</h3>
-            <p>
-              نرد على استفساراتكم في أسرع وقت ممكن ونلتزم بالمواعيد المحددة.
-            </p>
-          </div>
-          <div class="why-card reveal">
-            <div class="why-icon"><i class="fa-solid fa-handshake"></i></div>
-            <h3>نتائج مُثبتة</h3>
-            <p>
-              سجل حافل من الإنجازات القانونية والحلول الناجحة لمئات العملاء
-              والشركات.
-            </p>
-          </div>
-          <div class="why-card reveal">
-            <div class="why-icon"><i class="fa-solid fa-landmark"></i></div>
-            <h3>معرفة بالأنظمة السعودية</h3>
-            <p>
-              إلمام شامل بالتشريعات واللوائح السعودية وأحدث التعديلات القانونية.
-            </p>
-          </div>
-          <div class="why-card reveal">
-            <div class="why-icon"><i class="fa-solid fa-users-gear"></i></div>
-            <h3>خدمة شخصية مخصصة</h3>
-            <p>نتعامل مع كل قضية باهتمام خاص ونضع حلولاً مُخصصة لكل عميل.</p>
-          </div>
+          <h3>سرية تامة وأمانة</h3>
+          <p>
+            نلتزم بمعايير السرية العالية لحماية معلومات عملائنا وحقوقهم
+            القانونية.
+          </p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon"><i class="fa-solid fa-clock"></i></div>
+          <h3>استجابة سريعة</h3>
+          <p>
+            نرد على استفساراتكم في أسرع وقت ممكن ونلتزم بالمواعيد المحددة.
+          </p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon"><i class="fa-solid fa-handshake"></i></div>
+          <h3>نتائج مُثبتة</h3>
+          <p>
+            سجل حافل من الإنجازات القانونية والحلول الناجحة لمئات العملاء
+            والشركات.
+          </p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon"><i class="fa-solid fa-landmark"></i></div>
+          <h3>معرفة بالأنظمة السعودية</h3>
+          <p>
+            إلمام شامل بالتشريعات واللوائح السعودية وأحدث التعديلات القانونية.
+          </p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon"><i class="fa-solid fa-users-gear"></i></div>
+          <h3>خدمة شخصية مخصصة</h3>
+          <p>نتعامل مع كل قضية باهتمام خاص ونضع حلولاً مُخصصة لكل عميل.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
   <!-- ═══════════════════ SERVICES ═══════════════════ -->
-    <section class="services section-pad" id="services">
-      <!-- <div class="services-mobile-bg">
+  <section class="services section-pad" id="services">
+    <!-- <div class="services-mobile-bg">
         <div class="services-mobile-bg-img img-1"></div>
         <div class="services-mobile-bg-img img-2"></div>
         <div class="services-mobile-bg-img img-3"></div>
@@ -320,663 +400,561 @@
         <div class="services-mobile-bg-img img-7"></div>
         <div class="services-mobile-bg-img img-8"></div>
       </div> -->
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-label">خدماتنا القانونية</div>
-          <h2 class="section-title">
-            <span class="gold-text"
-              >تغطية شاملة لجميع احتياجاتكم القانونية
-            </span>
-          </h2>
-          <p class="section-sub">
-            نقدم طيفاً واسعاً من الخدمات القانونية المتخصصة للأفراد والشركات
-            والمنشآت.
-          </p>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">خدماتنا القانونية</div>
+        <h2 class="section-title">
+          <span class="gold-text">تغطية شاملة لجميع احتياجاتكم القانونية
+          </span>
+        </h2>
+        <p class="section-sub">
+          نقدم طيفاً واسعاً من الخدمات القانونية المتخصصة للأفراد والشركات
+          والمنشآت.
+        </p>
+      </div>
+
+      <!-- Category: Corporate & Business -->
+      <div class="services-category reveal">
+        <div class="cat-header">
+          <i class="fa-solid fa-building-columns"></i>
+          <h3>الشركات والأعمال التجارية</h3>
         </div>
 
-        <!-- Category: Corporate & Business -->
-        <div class="services-category reveal">
-          <div class="cat-header">
-            <i class="fa-solid fa-building-columns"></i>
-            <h3>الشركات والأعمال التجارية</h3>
-          </div>
-
-          <div class="cat-mobile-image">
-            <img
-              src="https://i.postimg.cc/9Cw9sZSt/Whats-App-Image-2026-06-12-at-1-40-57-PM.webp"
-              alt="صورة مكتب الفهدان"
-              class="cat-mobile-img"
-              loading="lazy"
-            />
-          </div>
-
-          <div class="services-grid">
-            <div class="service-card">
-              <i class="fa-solid fa-briefcase"></i>
-              <h4>الإدارة القانونية</h4>
-              <p>
-                إدارة الشؤون القانونية للمنشآت والشركات وتقديم المشورة المستمرة.
-              </p>
-            </div>
-            <div class="service-card">
-              <i class="fa-solid fa-rocket"></i>
-              <h4>الشركات وريادة الأعمال</h4>
-              <p>تأسيس الشركات وصياغة عقود الشراكة وحوكمة الأعمال.</p>
-            </div>
-            <div class="service-card">
-              <i class="fa-solid fa-handshake-angle"></i>
-              <h4>عقود الامتياز التجاري</h4>
-              <p>صياغة وتفاوض عقود الفرانشايز والامتياز التجاري.</p>
-            </div>
-            <div class="service-card">
-              <i class="fa-solid fa-bullhorn"></i>
-              <h4>الإعلانات والتسويق</h4>
-              <p>
-                الاستشارات القانونية في مجال الإعلان والتسويق الرقمي والتقليدي.
-              </p>
-            </div>
-          </div>
+        <div class="cat-mobile-image">
+          <img src="https://i.postimg.cc/9Cw9sZSt/Whats-App-Image-2026-06-12-at-1-40-57-PM.webp" alt="صورة مكتب الفهدان"
+            class="cat-mobile-img" loading="lazy" />
         </div>
 
-        <!-- Category: Finance & Contracts -->
-        <div class="services-category reveal">
-          <div class="cat-header">
-            <i class="fa-solid fa-coins"></i>
-            <h3>التمويل والعقود</h3>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fa-solid fa-briefcase"></i>
+            <h4>الإدارة القانونية</h4>
+            <p>
+              إدارة الشؤون القانونية للمنشآت والشركات وتقديم المشورة المستمرة.
+            </p>
           </div>
-
-          <div class="cat-mobile-image">
-            <img
-              src="https://i.postimg.cc/MZMmByZd/f68a4049-f234-468e-a009-145e0aac00c6.jpg"
-              alt="صورة مكتب الفهدان"
-              class="cat-mobile-img"
-              loading="lazy"
-            />
+          <div class="service-card">
+            <i class="fa-solid fa-rocket"></i>
+            <h4>الشركات وريادة الأعمال</h4>
+            <p>تأسيس الشركات وصياغة عقود الشراكة وحوكمة الأعمال.</p>
           </div>
-
-          <div class="services-grid">
-            <div class="service-card">
-              <i class="fa-solid fa-bank"></i>
-              <h4>المنازعات المصرفية</h4>
-              <p>تمثيل العملاء في النزاعات مع البنوك والمؤسسات المالية.</p>
-            </div>
-            <div class="service-card">
-              <i class="fa-solid fa-chart-line"></i>
-              <h4>التمويل والاستثمار</h4>
-              <p>استشارات قانونية في صفقات التمويل والاستثمار وعقوده.</p>
-            </div>
-            <div class="service-card">
-              <i class="fa-solid fa-file-contract"></i>
-              <h4>العقود المدنية والتجارية</h4>
-              <p>
-                صياغة ومراجعة وتفسير العقود المدنية والتجارية بكافة أنواعها.
-              </p>
-            </div>
+          <div class="service-card">
+            <i class="fa-solid fa-handshake-angle"></i>
+            <h4>عقود الامتياز التجاري</h4>
+            <p>صياغة وتفاوض عقود الفرانشايز والامتياز التجاري.</p>
           </div>
-        </div>
-
-        <!-- Category: Real Estate & Property -->
-        <div class="services-category reveal">
-          <div class="cat-header">
-            <i class="fa-solid fa-city"></i>
-            <h3>العقارات والملكية</h3>
-          </div>
-
-          <div class="cat-mobile-image">
-            <img
-              src="https://i.postimg.cc/3Y9qby48/1781284804214-jpg-(1).webp"
-              alt="صورة مكتب الفهدان"
-              class="cat-mobile-img"
-              loading="lazy"
-            />
-          </div>
-
-          <div class="services-grid">
-            <div class="service-card">
-              <i class="fa-solid fa-house-chimney"></i>
-              <h4>العقارات</h4>
-              <p>كل ما يتعلق بالعقود والنزاعات والتسجيل العقاري.</p>
-            </div>
-            <div class="service-card">
-              <i class="fa-solid fa-mosque"></i>
-              <h4>الأوقاف</h4>
-              <p>إدارة الأوقاف وحل نزاعاتها وصياغة صكوك الوقف.</p>
-            </div>
-            <div class="service-card">
-              <i class="fa-solid fa-scroll"></i>
-              <h4>التركات وتنفيذ الوصايا</h4>
-              <p>
-                إجراءات التوارث وتوزيع التركات وتنفيذ الوصايا شرعاً ونظاماً.
-              </p>
-            </div>
-            <div class="service-card">
-              <i class="fa-solid fa-lightbulb"></i>
-              <h4>الملكية الفكرية</h4>
-              <p>حماية براءات الاختراع والعلامات التجارية وحقوق المؤلف.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Category: Disputes & Litigation -->
-        <div class="services-category reveal">
-          <div class="cat-header">
-            <i class="fa-solid fa-gavel"></i>
-            <h3>المنازعات والتقاضي</h3>
-          </div>
-
-          <div class="cat-mobile-image">
-            <img
-              src="https://i.postimg.cc/fWtfdxWq/Whats-App-Image-2026-07-01-at-1-14-59-AM.jpg"
-              alt="صورة مكتب الفهدان"
-              class="cat-mobile-img"
-              loading="lazy"
-            />
-          </div>
-
-          <div class="services-grid">
-            <div class="service-card">
-              <i class="fa-solid fa-scale-balanced"></i>
-              <h4>تسوية المنازعات والتقاضي</h4>
-              <p>التمثيل أمام المحاكم على اختلاف درجاتها وأنواعها.</p>
-            </div>
-            <div class="service-card">
-              <i class="fa-solid fa-shield-virus"></i>
-              <h4>القضايا الجزائية</h4>
-              <p>الدفاع في القضايا الجزائية وتمثيل المتضررين.</p>
-            </div>
-            <div class="service-card">
-              <i class="fa-solid fa-comments-dollar"></i>
-              <h4>التحكيم والتسويات</h4>
-              <p>إجراءات التحكيم والوساطة وتسوية النزاعات بديلاً عن التقاضي.</p>
-            </div>
-            <div class="service-card">
-              <i class="fa-solid fa-building-flag"></i>
-              <h4>المنازعات الإدارية</h4>
-              <p>التقاضي أمام ديوان المظالم والجهات الإدارية القضائية.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Category: Personal & Labor -->
-        <div class="services-category reveal">
-          <div class="cat-header">
-            <i class="fa-solid fa-people-roof"></i>
-            <h3>الشؤون الشخصية والعمالية</h3>
-          </div>
-          <div class="cat-mobile-image">
-            <img
-              src="https://i.postimg.cc/B4F29nhX/174253b2-c0f9-4d40-8945-ed9afb5ffbd0.jpg"
-              alt="صورة مكتب الفهدان"
-              class="cat-mobile-img"
-              loading="lazy"
-            />
-          </div>
-          <div class="services-grid">
-            <div class="service-card">
-              <i class="fa-solid fa-person-chalkboard"></i>
-              <h4>علاقات العمل</h4>
-              <p>نزاعات العمل وصياغة عقود العمل وإنهاء الخدمات.</p>
-            </div>
-            <div class="service-card">
-              <i class="fa-solid fa-heart"></i>
-              <h4>قضايا الأحوال الشخصية</h4>
-              <p>الطلاق، الحضانة، النفقة، الميراث والمسائل الأسرية.</p>
-            </div>
-            <div class="service-card">
-              <i class="fa-solid fa-hotel"></i>
-              <h4>السياحة والفندقة</h4>
-              <p>استشارات قانونية لقطاع السياحة والضيافة والفنادق.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Category: Execution & Collection -->
-        <div class="services-category reveal">
-          <div class="cat-header">
-            <i class="fa-solid fa-hammer"></i>
-            <h3>التنفيذ والتحصيل</h3>
-          </div>
-          <div class="cat-mobile-image">
-            <img
-              src="https://i.postimg.cc/PJGC8N8P/Whats-App-Image-2026-06-12-at-1-40-57-PM-(2).jpg"
-              alt="صورة مكتب الفهدان"
-              class="cat-mobile-img"
-              loading="lazy"
-            />
-          </div>
-          <div class="services-grid">
-            <div class="service-card">
-              <i class="fa-solid fa-money-bill-trend-up"></i>
-              <h4>تنفيذ الأحكام والتحصيل</h4>
-              <p>تنفيذ الأحكام القضائية وتحصيل الديون والمستحقات.</p>
-            </div>
-            <div class="service-card">
-              <i class="fa-solid fa-circle-info"></i>
-              <h4>الخدمات الميسرة للأفراد</h4>
-              <p>خدمات قانونية متنوعة وميسرة للأفراد والعائلات.</p>
-            </div>
+          <div class="service-card">
+            <i class="fa-solid fa-bullhorn"></i>
+            <h4>الإعلانات والتسويق</h4>
+            <p>
+              الاستشارات القانونية في مجال الإعلان والتسويق الرقمي والتقليدي.
+            </p>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- ═══════════════════ PROCESS ═══════════════════ -->
-    <section class="process section-pad" id="process">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-label">آلية العمل</div>
-          <h2 class="section-title">
-            <span class="gold-text">كيف نخدمك</span>
-          </h2>
-          <p class="section-sub">
-            نتبع منهجية واضحة ومنظمة لضمان أفضل النتائج لكل عميل.
-          </p>
+      <!-- Category: Finance & Contracts -->
+      <div class="services-category reveal">
+        <div class="cat-header">
+          <i class="fa-solid fa-coins"></i>
+          <h3>التمويل والعقود</h3>
         </div>
 
-        <div class="process-timeline">
-          <div class="process-step reveal">
-            <div class="step-num">01</div>
-            <div class="step-icon"><i class="fa-solid fa-paper-plane"></i></div>
-            <div class="step-content">
-              <h3>إرسال الطلب</h3>
-              <p>
-                تواصل معنا عبر النموذج أو واتساب وأخبرنا بقضيتك أو استفسارك
-                القانوني.
-              </p>
-            </div>
-            <div class="step-connector"></div>
+        <div class="cat-mobile-image">
+          <img src="https://i.postimg.cc/MZMmByZd/f68a4049-f234-468e-a009-145e0aac00c6.jpg" alt="صورة مكتب الفهدان"
+            class="cat-mobile-img" loading="lazy" />
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fa-solid fa-bank"></i>
+            <h4>المنازعات المصرفية</h4>
+            <p>تمثيل العملاء في النزاعات مع البنوك والمؤسسات المالية.</p>
           </div>
-          <div class="process-step reveal">
-            <div class="step-num">02</div>
-            <div class="step-icon">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <div class="step-content">
-              <h3>دراسة الحالة</h3>
-              <p>
-                يقوم فريقنا القانوني بدراسة وتحليل قضيتك وتقييم الوضع القانوني
-                بدقة.
-              </p>
-            </div>
-            <div class="step-connector"></div>
+          <div class="service-card">
+            <i class="fa-solid fa-chart-line"></i>
+            <h4>التمويل والاستثمار</h4>
+            <p>استشارات قانونية في صفقات التمويل والاستثمار وعقوده.</p>
           </div>
-          <div class="process-step reveal">
-            <div class="step-num">03</div>
-            <div class="step-icon">
-              <i class="fa-solid fa-phone-volume"></i>
-            </div>
-            <div class="step-content">
-              <h3>التواصل مع العميل</h3>
-              <p>
-                نتواصل معك لمناقشة التفاصيل واقتراح الاستراتيجية القانونية
-                المثلى.
-              </p>
-            </div>
-            <div class="step-connector"></div>
-          </div>
-          <div class="process-step reveal">
-            <div class="step-num">04</div>
-            <div class="step-icon">
-              <i class="fa-solid fa-flag-checkered"></i>
-            </div>
-            <div class="step-content">
-              <h3>بدء التنفيذ</h3>
-              <p>
-                نباشر بتنفيذ الخطة القانونية المتفق عليها بكفاءة عالية وشفافية
-                تامة.
-              </p>
-            </div>
+          <div class="service-card">
+            <i class="fa-solid fa-file-contract"></i>
+            <h4>العقود المدنية والتجارية</h4>
+            <p>
+              صياغة ومراجعة وتفسير العقود المدنية والتجارية بكافة أنواعها.
+            </p>
           </div>
         </div>
-        <div class="process-mobile-image">
-    <img
-        src="https://i.postimg.cc/jtQWv870/1781289060702-jpg.jpg"
-        alt="مكتب نايف مسفر الفهدان للمحاماة والاستشارات القانونية"
-    >
-</div>
       </div>
-    </section>
 
-    <!-- ═══════════════════ REGISTRATION ═══════════════════ -->
-    <section class="registration section-pad" id="registration">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-label">الاعتماد الرسمي</div>
-          <h2 class="section-title">
-            <span class="gold-text">مكتب مرخّص و معتمد </span>
-          </h2>
-          <p class="reg-subtitle">
-            نعمل تحت ترخيص قانوني كامل في المملكة العربية السعودية
-          </p>
+      <!-- Category: Real Estate & Property -->
+      <div class="services-category reveal">
+        <div class="cat-header">
+          <i class="fa-solid fa-city"></i>
+          <h3>العقارات والملكية</h3>
+        </div>
 
-          <div class="reg-logos" aria-hidden="false">
-            <img
-              class="reg-logo reg-logo-ministry"
-              src="https://upload.wikimedia.org/wikipedia/ar/6/62/Saudi_Ministry_of_Justice_Logo.svg"
-              alt="وزارة العدل"
-              loading="lazy"
-            />
-            <img
-              class="reg-logo reg-logo-sba"
-              src="https://sba.gov.sa/wp-content/uploads/2022/03/sba-logo.svg"
-              alt="الهيئة العامة للمنشآت الصغيرة والمتوسطة"
-              loading="lazy"
-            />
-            <img
-              class="reg-logo reg-logo-vision"
-              src="https://sba.gov.sa/wp-content/uploads/2022/03/vision-2030.svg"
-              alt="رؤية السعودية 2030"
-              loading="lazy"
-            />
+        <div class="cat-mobile-image">
+          <img src="https://i.postimg.cc/3Y9qby48/1781284804214-jpg-(1).webp" alt="صورة مكتب الفهدان"
+            class="cat-mobile-img" loading="lazy" />
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fa-solid fa-house-chimney"></i>
+            <h4>العقارات</h4>
+            <p>كل ما يتعلق بالعقود والنزاعات والتسجيل العقاري.</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-mosque"></i>
+            <h4>الأوقاف</h4>
+            <p>إدارة الأوقاف وحل نزاعاتها وصياغة صكوك الوقف.</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-scroll"></i>
+            <h4>التركات وتنفيذ الوصايا</h4>
+            <p>
+              إجراءات التوارث وتوزيع التركات وتنفيذ الوصايا شرعاً ونظاماً.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-lightbulb"></i>
+            <h4>الملكية الفكرية</h4>
+            <p>حماية براءات الاختراع والعلامات التجارية وحقوق المؤلف.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category: Disputes & Litigation -->
+      <div class="services-category reveal">
+        <div class="cat-header">
+          <i class="fa-solid fa-gavel"></i>
+          <h3>المنازعات والتقاضي</h3>
+        </div>
+
+        <div class="cat-mobile-image">
+          <img src="https://i.postimg.cc/fWtfdxWq/Whats-App-Image-2026-07-01-at-1-14-59-AM.jpg" alt="صورة مكتب الفهدان"
+            class="cat-mobile-img" loading="lazy" />
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fa-solid fa-scale-balanced"></i>
+            <h4>تسوية المنازعات والتقاضي</h4>
+            <p>التمثيل أمام المحاكم على اختلاف درجاتها وأنواعها.</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-shield-virus"></i>
+            <h4>القضايا الجزائية</h4>
+            <p>الدفاع في القضايا الجزائية وتمثيل المتضررين.</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-comments-dollar"></i>
+            <h4>التحكيم والتسويات</h4>
+            <p>إجراءات التحكيم والوساطة وتسوية النزاعات بديلاً عن التقاضي.</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-building-flag"></i>
+            <h4>المنازعات الإدارية</h4>
+            <p>التقاضي أمام ديوان المظالم والجهات الإدارية القضائية.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category: Personal & Labor -->
+      <div class="services-category reveal">
+        <div class="cat-header">
+          <i class="fa-solid fa-people-roof"></i>
+          <h3>الشؤون الشخصية والعمالية</h3>
+        </div>
+        <div class="cat-mobile-image">
+          <img src="https://i.postimg.cc/B4F29nhX/174253b2-c0f9-4d40-8945-ed9afb5ffbd0.jpg" alt="صورة مكتب الفهدان"
+            class="cat-mobile-img" loading="lazy" />
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fa-solid fa-person-chalkboard"></i>
+            <h4>علاقات العمل</h4>
+            <p>نزاعات العمل وصياغة عقود العمل وإنهاء الخدمات.</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-heart"></i>
+            <h4>قضايا الأحوال الشخصية</h4>
+            <p>الطلاق، الحضانة، النفقة، الميراث والمسائل الأسرية.</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-hotel"></i>
+            <h4>السياحة والفندقة</h4>
+            <p>استشارات قانونية لقطاع السياحة والضيافة والفنادق.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category: Execution & Collection -->
+      <div class="services-category reveal">
+        <div class="cat-header">
+          <i class="fa-solid fa-hammer"></i>
+          <h3>التنفيذ والتحصيل</h3>
+        </div>
+        <div class="cat-mobile-image">
+          <img src="https://i.postimg.cc/PJGC8N8P/Whats-App-Image-2026-06-12-at-1-40-57-PM-(2).jpg"
+            alt="صورة مكتب الفهدان" class="cat-mobile-img" loading="lazy" />
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fa-solid fa-money-bill-trend-up"></i>
+            <h4>تنفيذ الأحكام والتحصيل</h4>
+            <p>تنفيذ الأحكام القضائية وتحصيل الديون والمستحقات.</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-circle-info"></i>
+            <h4>الخدمات الميسرة للأفراد</h4>
+            <p>خدمات قانونية متنوعة وميسرة للأفراد والعائلات.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ PROCESS ═══════════════════ -->
+  <section class="process section-pad" id="process">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">آلية العمل</div>
+        <h2 class="section-title">
+          <span class="gold-text">كيف نخدمك</span>
+        </h2>
+        <p class="section-sub">
+          نتبع منهجية واضحة ومنظمة لضمان أفضل النتائج لكل عميل.
+        </p>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-step reveal">
+          <div class="step-num">01</div>
+          <div class="step-icon"><i class="fa-solid fa-paper-plane"></i></div>
+          <div class="step-content">
+            <h3>إرسال الطلب</h3>
+            <p>
+              تواصل معنا عبر النموذج أو واتساب وأخبرنا بقضيتك أو استفسارك
+              القانوني.
+            </p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">02</div>
+          <div class="step-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="step-content">
+            <h3>دراسة الحالة</h3>
+            <p>
+              يقوم فريقنا القانوني بدراسة وتحليل قضيتك وتقييم الوضع القانوني
+              بدقة.
+            </p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">03</div>
+          <div class="step-icon">
+            <i class="fa-solid fa-phone-volume"></i>
+          </div>
+          <div class="step-content">
+            <h3>التواصل مع العميل</h3>
+            <p>
+              نتواصل معك لمناقشة التفاصيل واقتراح الاستراتيجية القانونية
+              المثلى.
+            </p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">04</div>
+          <div class="step-icon">
+            <i class="fa-solid fa-flag-checkered"></i>
+          </div>
+          <div class="step-content">
+            <h3>بدء التنفيذ</h3>
+            <p>
+              نباشر بتنفيذ الخطة القانونية المتفق عليها بكفاءة عالية وشفافية
+              تامة.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="process-mobile-image">
+        <img src="https://i.postimg.cc/jtQWv870/1781289060702-jpg.jpg"
+          alt="مكتب نايف مسفر الفهدان للمحاماة والاستشارات القانونية">
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ REGISTRATION ═══════════════════ -->
+  <section class="registration section-pad" id="registration">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">الاعتماد الرسمي</div>
+        <h2 class="section-title">
+          <span class="gold-text">مكتب مرخّص و معتمد </span>
+        </h2>
+        <p class="reg-subtitle">
+          نعمل تحت ترخيص قانوني كامل في المملكة العربية السعودية
+        </p>
+
+        <div class="reg-logos" aria-hidden="false">
+          <img class="reg-logo reg-logo-ministry"
+            src="https://upload.wikimedia.org/wikipedia/ar/6/62/Saudi_Ministry_of_Justice_Logo.svg" alt="وزارة العدل"
+            loading="lazy" />
+          <img class="reg-logo reg-logo-sba" src="https://sba.gov.sa/wp-content/uploads/2022/03/sba-logo.svg"
+            alt="الهيئة العامة للمنشآت الصغيرة والمتوسطة" loading="lazy" />
+          <img class="reg-logo reg-logo-vision" src="https://sba.gov.sa/wp-content/uploads/2022/03/vision-2030.svg"
+            alt="رؤية السعودية 2030" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="reg-wrap reveal">
+        <div class="reg-card">
+          <div class="reg-icon-wrap">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div class="reg-content">
+            <h3>شهادة تسجيل المنشأة القانونية</h3>
+            <p>
+              مكتب نايف بن مسفر الفهدان للمحاماة والاستشارات القانونية مُسجَّل
+              رسمياً ومرخَّص من وزارة العدل في المملكة العربية السعودية وفق
+              المتطلبات النظامية المعمول بها.
+            </p>
+            <div class="reg-number-wrap">
+              <span class="reg-label">رقم التسجيل</span>
+              <span class="reg-num">7054401349</span>
+            </div>
+          </div>
+          <div class="reg-seal">
+            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="60" cy="60" r="55" fill="none" stroke="#D4AF37" stroke-width="1.5" opacity="0.6" />
+              <circle cx="60" cy="60" r="46" fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.4" />
+              <polygon points="60,15 67,45 98,45 74,62 83,92 60,75 37,92 46,62 22,45 53,45" fill="none" stroke="#D4AF37"
+                stroke-width="1" opacity="0.5" />
+              <text x="60" y="65" text-anchor="middle" fill="#D4AF37" font-size="8" opacity="0.7" font-family="Cairo">
+                معتمد
+              </text>
+            </svg>
           </div>
         </div>
 
-        <div class="reg-wrap reveal">
-          <div class="reg-card">
-            <div class="reg-icon-wrap">
-              <i class="fa-solid fa-award"></i>
-            </div>
-            <div class="reg-content">
-              <h3>شهادة تسجيل المنشأة القانونية</h3>
-              <p>
-                مكتب نايف بن مسفر الفهدان للمحاماة والاستشارات القانونية مُسجَّل
-                رسمياً ومرخَّص من وزارة العدل في المملكة العربية السعودية وفق
-                المتطلبات النظامية المعمول بها.
-              </p>
-              <div class="reg-number-wrap">
-                <span class="reg-label">رقم التسجيل</span>
-                <span class="reg-num">7054401349</span>
-              </div>
-            </div>
-            <div class="reg-seal">
-              <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                <circle
-                  cx="60"
-                  cy="60"
-                  r="55"
-                  fill="none"
-                  stroke="#D4AF37"
-                  stroke-width="1.5"
-                  opacity="0.6"
-                />
-                <circle
-                  cx="60"
-                  cy="60"
-                  r="46"
-                  fill="none"
-                  stroke="#D4AF37"
-                  stroke-width="0.8"
-                  opacity="0.4"
-                />
-                <polygon
-                  points="60,15 67,45 98,45 74,62 83,92 60,75 37,92 46,62 22,45 53,45"
-                  fill="none"
-                  stroke="#D4AF37"
-                  stroke-width="1"
-                  opacity="0.5"
-                />
-                <text
-                  x="60"
-                  y="65"
-                  text-anchor="middle"
-                  fill="#D4AF37"
-                  font-size="8"
-                  opacity="0.7"
-                  font-family="Cairo"
-                >
-                  معتمد
-                </text>
-              </svg>
-            </div>
+        <div class="reg-badges">
+          <div class="reg-badge">
+            <i class="fa-solid fa-check-double"></i>
+            <span>مرخَّص من وزارة العدل</span>
           </div>
-
-          <div class="reg-badges">
-            <div class="reg-badge">
-              <i class="fa-solid fa-check-double"></i>
-              <span>مرخَّص من وزارة العدل</span>
-            </div>
-            <div class="reg-badge">
-              <i class="fa-solid fa-check-double"></i>
-              <span>عضو هيئة المحامين السعوديين</span>
-            </div>
-            <div class="reg-badge">
-              <i class="fa-solid fa-check-double"></i>
-              <span>ملتزم بأخلاقيات مهنة المحاماة</span>
-            </div>
-            <div class="reg-badge">
-              <i class="fa-solid fa-check-double"></i>
-              <span>خاضع للرقابة القضائية</span>
-            </div>
+          <div class="reg-badge">
+            <i class="fa-solid fa-check-double"></i>
+            <span>عضو هيئة المحامين السعوديين</span>
           </div>
+          <div class="reg-badge">
+            <i class="fa-solid fa-check-double"></i>
+            <span>ملتزم بأخلاقيات مهنة المحاماة</span>
+          </div>
+          <div class="reg-badge">
+            <i class="fa-solid fa-check-double"></i>
+            <span>خاضع للرقابة القضائية</span>
+          </div>
+        </div>
         <div class="reg-mobile-image">
-    <img
-        src="https://i.postimg.cc/cL2svyFc/Whats-App-Image-2026-06-29-at-1-14-27-AM.jpg"
-        alt="مكتب نايف مسفر الفهدان للمحاماة والاستشارات القانونية"
-    >
-</div>
-          
+          <img src="https://i.postimg.cc/cL2svyFc/Whats-App-Image-2026-06-29-at-1-14-27-AM.jpg"
+            alt="مكتب نايف مسفر الفهدان للمحاماة والاستشارات القانونية">
         </div>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="contact section-pad" id="contact">
-      <div class="container contact-grid">
-        <div class="contact-info reveal">
-          <div class="section-label">تواصل معنا</div>
-          <h2 class="section-title">
-            <span class="gold-text">لمساعدتك نحن هنا</span>
-          </h2>
-          <p class="section-sub">
-            احجز استشارتك القانونية الآن أو تواصل معنا عبر أي من القنوات
-            التالية.
-          </p>
+  <section class="contact section-pad" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info reveal">
+        <div class="section-label">تواصل معنا</div>
+        <h2 class="section-title">
+          <span class="gold-text">لمساعدتك نحن هنا</span>
+        </h2>
+        <p class="section-sub">
+          احجز استشارتك القانونية الآن أو تواصل معنا عبر أي من القنوات
+          التالية.
+        </p>
 
-          <div class="contact-cards">
-            <!-- <a href="tel:+966553333373" class="contact-card">
+        <div class="contact-cards">
+          <!-- <a href="tel:+966553333373" class="contact-card">
               <div class="cc-icon"><i class="fa-solid fa-phone"></i></div>
               <div>
                 <span class="cc-label">الهاتف</span>
                 <span class="cc-val" dir="ltr">+966 55 064 0640</span>
               </div>
             </a> -->
-            <a
-              href="https://wa.me/966550640640"
-              target="_blank"
-              class="contact-card contact-card-wa"
-            >
-              <div class="cc-icon"><i class="fa-brands fa-whatsapp"></i></div>
-              <div>
-                <span class="cc-label">واتساب</span>
-                <span class="cc-val">تواصل مباشرة الآن</span>
-              </div>
-            </a>
-            <a href="mailto:Law@NaifAlfhdan.sa" class="contact-card">
-              <div class="cc-icon"><i class="fa-solid fa-envelope"></i></div>
-              <div>
-                <span class="cc-label">البريد الإلكتروني</span>
-                <span class="cc-val">Law@NaifAlfhdan.sa</span>
-              </div>
-            </a>
-            <div class="contact-card">
-              <div class="cc-icon">
-                <i class="fa-solid fa-location-dot"></i>
-              </div>
-              <div>
-                <span class="cc-label">الموقع</span>
-                <span class="cc-val">الرياض، المملكة العربية السعودية</span>
-              </div>
+          <a href="https://wa.me/966550640640" target="_blank" class="contact-card contact-card-wa">
+            <div class="cc-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div>
+              <span class="cc-label">واتساب</span>
+              <span class="cc-val">تواصل مباشرة الآن</span>
+            </div>
+          </a>
+          <a href="mailto:Law@NaifAlfhdan.sa" class="contact-card">
+            <div class="cc-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <span class="cc-label">البريد الإلكتروني</span>
+              <span class="cc-val">Law@NaifAlfhdan.sa</span>
+            </div>
+          </a>
+          <div class="contact-card">
+            <div class="cc-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <span class="cc-label">الموقع</span>
+              <span class="cc-val">الرياض، المملكة العربية السعودية</span>
             </div>
           </div>
         </div>
-
-        <div class="contact-form-wrap reveal">
-          <form class="contact-form" id="consultForm">
-            <h3>احجز استشارتك</h3>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="fname">الاسم الكامل</label>
-                <input
-                  type="text"
-                  id="fname"
-                  placeholder="أدخل اسمك الكامل"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="fphone">رقم الجوال</label>
-                <input
-                  type="tel"
-                  id="fphone"
-                  placeholder="05xxxxxxxx"
-                  required
-                />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="femail">البريد الإلكتروني</label>
-              <input type="email" id="femail" placeholder="example@email.com" />
-            </div>
-            <div class="form-group">
-              <label for="fservice">نوع الخدمة</label>
-              <select id="fservice">
-                <option value="">اختر نوع الخدمة</option>
-                <option>الإدارة القانونية</option>
-                <option>الشركات وريادة الأعمال</option>
-                <option>المنازعات المصرفية</option>
-                <option>التمويل والاستثمار</option>
-                <option>العقود المدنية والتجارية</option>
-                <option>العقارات</option>
-                <option>قضايا الأحوال الشخصية</option>
-                <option>القضايا الجزائية</option>
-                <option>التحكيم والتسويات</option>
-                <option>علاقات العمل</option>
-                <option>أخرى</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="fmsg">تفاصيل الاستفسار</label>
-              <textarea
-                id="fmsg"
-                rows="4"
-                placeholder="اكتب تفاصيل قضيتك أو استفسارك القانوني..."
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn-gold btn-full">
-              <i class="fa-solid fa-paper-plane"></i>
-              إرسال الطلب
-            </button>
-            <div class="form-success" id="formSuccess">
-              <i class="fa-solid fa-circle-check"></i>
-              تم إرسال طلبك بنجاح! سنتواصل معك قريباً.
-            </div>
-          </form>
-        </div>
       </div>
-    </section>
 
-    <!-- ═══════════════════ CTA ═══════════════════ -->
-    <section class="cta-section">
-      <div class="cta-bg-effect"></div>
-      <div class="cta-mobile-image">
-        <img
-          src="https://i.postimg.cc/bqgtY6YX/Whats-App-Image-2026-06-12-at-1-40-56-PM.jpg"
-          alt="مكتب نايف مسفر الفهدان للمحاماة والاستشارات القانونية"
-        />
+      <div class="contact-form-wrap reveal">
+        <form class="contact-form" id="consultForm">
+          <h3>احجز استشارتك</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">الاسم الكامل</label>
+              <input type="text" id="fname" placeholder="أدخل اسمك الكامل" required />
+            </div>
+            <div class="form-group">
+              <label for="fphone">رقم الجوال</label>
+              <input type="tel" id="fphone" placeholder="05xxxxxxxx" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="femail">البريد الإلكتروني</label>
+            <input type="email" id="femail" placeholder="example@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="fservice">نوع الخدمة</label>
+            <select id="fservice">
+              <option value="">اختر نوع الخدمة</option>
+              <option>الإدارة القانونية</option>
+              <option>الشركات وريادة الأعمال</option>
+              <option>المنازعات المصرفية</option>
+              <option>التمويل والاستثمار</option>
+              <option>العقود المدنية والتجارية</option>
+              <option>العقارات</option>
+              <option>قضايا الأحوال الشخصية</option>
+              <option>القضايا الجزائية</option>
+              <option>التحكيم والتسويات</option>
+              <option>علاقات العمل</option>
+              <option>أخرى</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fmsg">تفاصيل الاستفسار</label>
+            <textarea id="fmsg" rows="4" placeholder="اكتب تفاصيل قضيتك أو استفسارك القانوني..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold btn-full">
+            <i class="fa-solid fa-paper-plane"></i>
+            إرسال الطلب
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fa-solid fa-circle-check"></i>
+            تم إرسال طلبك بنجاح! سنتواصل معك قريباً.
+          </div>
+        </form>
       </div>
-      <div class="container cta-inner reveal">
-        <i class="fa-solid fa-balance-scale cta-icon"></i>
-        <!-- <h2>هل تحتاج إلى مساعدة قانونية؟</h2> -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CTA ═══════════════════ -->
+  <section class="cta-section">
+    <div class="cta-bg-effect"></div>
+    <div class="cta-mobile-image">
+      <img src="https://i.postimg.cc/bqgtY6YX/Whats-App-Image-2026-06-12-at-1-40-56-PM.jpg"
+        alt="مكتب نايف مسفر الفهدان للمحاماة والاستشارات القانونية" />
+    </div>
+    <div class="container cta-inner reveal">
+      <i class="fa-solid fa-balance-scale cta-icon"></i>
+      <!-- <h2>هل تحتاج إلى مساعدة قانونية؟</h2> -->
+      <p>
+        لا تتردد في التواصل معنا اليوم. فريقنا من المتخصصين القانونيين مستعد
+        لمساعدتك.
+      </p>
+      <div class="cta-actions">
+        <a href="#contact" class="btn btn-gold">
+          <i class="fa-solid fa-calendar-check"></i>
+          احجز استشارتك الآن
+        </a>
+        <a href="https://wa.me/966550640640" target="_blank" class="btn btn-outline">
+          <i class="fa-brands fa-whatsapp"></i>
+          واتساب مباشر
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="logo-wrap">
+          <img src="https://i.postimg.cc/Y92nbqKC/Image-To-Stl-com-logo.png" alt="شعار المكتب"
+            class="logo-img logo-img-sm" />
+          <span class="logo-text">مكتب نايف بن مسفر الفهدان
+            <span>للمحاماة و الإستشارات القانونية</span></span>
+        </a>
         <p>
-          لا تتردد في التواصل معنا اليوم. فريقنا من المتخصصين القانونيين مستعد
-          لمساعدتك.
+          مكتب قانوني متخصص في تقديم الخدمات القانونية المتكاملة للأفراد
+          والشركات في المملكة العربية السعودية.
         </p>
-        <div class="cta-actions">
-          <a href="#contact" class="btn btn-gold">
-            <i class="fa-solid fa-calendar-check"></i>
-            احجز استشارتك الآن
-          </a>
-          <a
-            href="https://wa.me/966550640640"
-            target="_blank"
-            class="btn btn-outline"
-          >
-            <i class="fa-brands fa-whatsapp"></i>
-            واتساب مباشر
-          </a>
-        </div>
       </div>
-    </section>
 
-    <!-- ═══════════════════ FOOTER ═══════════════════ -->
-    <footer class="footer">
-      <div class="container footer-inner">
-        <div class="footer-brand">
-          <a href="#hero" class="logo-wrap">
-            <img
-              src="https://i.postimg.cc/Y92nbqKC/Image-To-Stl-com-logo.png"
-              alt="شعار المكتب"
-              class="logo-img logo-img-sm"
-            />
-            <span class="logo-text"
-              >مكتب نايف بن مسفر الفهدان
-              <span>للمحاماة و الإستشارات القانونية</span></span
-            >
-          </a>
-          <p>
-            مكتب قانوني متخصص في تقديم الخدمات القانونية المتكاملة للأفراد
-            والشركات في المملكة العربية السعودية.
-          </p>
-        </div>
+      <div class="footer-links">
+        <h4>روابط سريعة</h4>
+        <a href="#about">عن المكتب</a>
+        <a href="#services">الخدمات</a>
+        <a href="#why-us">لماذا نحن</a>
+        <a href="#process">آلية العمل</a>
+        <a href="#registration">التسجيل</a>
+        <a href="#contact">تواصل معنا</a>
+      </div>
 
-        <div class="footer-links">
-          <h4>روابط سريعة</h4>
-          <a href="#about">عن المكتب</a>
-          <a href="#services">الخدمات</a>
-          <a href="#why-us">لماذا نحن</a>
-          <a href="#process">آلية العمل</a>
-          <a href="#registration">التسجيل</a>
-          <a href="#contact">تواصل معنا</a>
-        </div>
-
-        <div class="footer-contact">
-          <h4>معلومات التواصل</h4>
-          <!-- <p>
+      <div class="footer-contact">
+        <h4>معلومات التواصل</h4>
+        <!-- <p>
             <i class="fa-solid fa-phone"></i>
             <span dir="ltr">+966 55 064 0640</span>
           </p> -->
-          <p><i class="fa-solid fa-envelope"></i> Law@NaifAlfhdan.sa</p>
-          <p>
-            <i class="fa-solid fa-location-dot"></i> الرياض، المملكة العربية
-            السعودية
-          </p>
-          <!-- <p><i class="fa-solid fa-id-card"></i> رقم التسجيل: 7054401349</p> -->
-        </div>
-      </div>
-
-      <div class="footer-bottom">
+        <p><i class="fa-solid fa-envelope"></i> Law@NaifAlfhdan.sa</p>
         <p>
-          © 2025 مكتب نايف مسفر مشرف الفهدان للمحاماة والاستشارات القانونية.
-          جميع الحقوق محفوظة.
+          <i class="fa-solid fa-location-dot"></i> الرياض، المملكة العربية
+          السعودية
         </p>
+        <!-- <p><i class="fa-solid fa-id-card"></i> رقم التسجيل: 7054401349</p> -->
       </div>
-    </footer>
+    </div>
 
-    <!-- ═══════════════════ WHATSAPP FLOAT ═══════════════════ -->
-    <a
-      href="https://wa.me/966550640640"
-      target="_blank"
-      class="wa-float"
-      aria-label="تواصل عبر واتساب"
-    >
-      <i class="fa-brands fa-whatsapp"></i>
-      <span class="wa-tooltip">تواصل الآن</span>
-    </a>
+    <div class="footer-bottom">
+      <p>
+        © 2025 مكتب نايف مسفر مشرف الفهدان للمحاماة والاستشارات القانونية.
+        جميع الحقوق محفوظة.
+      </p>
+    </div>
+  </footer>
 
-    <!-- ═══════════════════ SCROLL TO TOP ═══════════════════ -->
-    <button class="scroll-top" id="scrollTop" aria-label="أعلى الصفحة">
-      <i class="fa-solid fa-chevron-up"></i>
-    </button>
+  <!-- ═══════════════════ WHATSAPP FLOAT ═══════════════════ -->
+  <a href="https://wa.me/966550640640" target="_blank" class="wa-float" aria-label="تواصل عبر واتساب">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="wa-tooltip">تواصل الآن</span>
+  </a>
 
-    <script src="script.js"></script>
-  </body>
+  <!-- ═══════════════════ SCROLL TO TOP ═══════════════════ -->
+  <button class="scroll-top" id="scrollTop" aria-label="أعلى الصفحة">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
